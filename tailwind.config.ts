@@ -9,6 +9,7 @@ const config: Config = {
         'white': '#E8E8E8',
         'black': '#101010',
         'grey': '#989898',
+        'darkgrey': '#5E5E5E'
     },
     container: {
       // container centered
