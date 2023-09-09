@@ -6,7 +6,31 @@
   --white: #E8E8E8;
   --black: #101010;
   --grey: #989898;
+  --darkgrey: #5E5E5E;
+  
   color-scheme: dark;
   color: var(--white);
   background-color: var(--black);
+}
+
+.contact-links li {
+    position: relative;
+}
+.contact-links li a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: -2px;
+    background: var(--darkgrey);
+    height: 1px;
+    transition-property: width;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.contact-links li a:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
 }

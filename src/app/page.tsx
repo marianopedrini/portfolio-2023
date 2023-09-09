@@ -1,23 +1,37 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import NavBar from "./components/NavBar";
-import Header from "./components/Header";
-import AboutSection from "./(index)/AboutSection";
-import CarreerSection from "./(index)/CarreerSection";
+import NavMenu from "@/components/NavMenu/NavMenu";
+import Header from "@/components/Header/Header";
+import About from "@/components/Sections/About";
+import Carreer from "@/components/Sections/Carreer";
+import Skills from "@/components/Sections/Skills";
+import Work from "@/components/Sections/Work";
+import Contact from "@/components/Sections/Contact";
 
 export default function Home() {
   const [isMenuActive, setIsMenuActive] = useState(false)
+
+  // Smooth Scroll using locomotive scroll
+  useEffect(() => {
+    (
+        async () => {
+            const LocomotiveScroll = (await import('locomotive-scroll')).default;
+            const locomotiveScroll = new LocomotiveScroll();
+        }
+    )()
+  }, [])
+  
   
   return (
-    <main className="h-[300vh]">
-        {/* <NavBar /> */}
+    <main>
+        <NavMenu isActive={isMenuActive} />
         <Header isActive={isMenuActive} setIsActive={setIsMenuActive}/>
-        <AboutSection />
-        <CarreerSection />
+        <About />
+        <Carreer />
+        <Skills />
+        <Work />
+        <Contact />
     </main>
   )
 }
-
-// className='container text-[82px] tracking-[-4px]'
-// <span className="font-semibold">Mariano</span>Pedrini

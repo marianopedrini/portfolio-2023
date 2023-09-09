@@ -14,13 +14,18 @@ const config: Config = {
     container: {
       // container centered
       center: true,
-      // orizontal padding
+      // horizontal padding
       padding: '20px',
       // default breakpoints
       screens: {
         '2xl': '1280px',
       },
     },
+    extend: {
+        animation: {
+            bounce: 'bounce 1.5s infinite'
+        }
+    }
   },
   plugins: [],
 }

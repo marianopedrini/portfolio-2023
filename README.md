@@ -7,7 +7,7 @@ xl	1280px	@media (min-width: 1280px) { ... }
 
 Fontsize
 Ultra Light - 100 - Tailwind:font-thin
-Regular - 400 - Tailwind:font-font-normal
+Regular - 400 - Tailwind:font-normal
 Medium - 500 - Tailwind:font-medium
 Demi - 600 - Tailwind:font-semibold
 Bold- 700 - Tailwind:font-bold
