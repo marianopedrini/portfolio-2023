@@ -6,7 +6,7 @@ import { contactLinks } from "@/data";
 
 const Contact = () => {
   return (
-    <Section extraClasses="h-[100dvh]">
+    <Section extraClasses="h-[100dvh]" id="contact">
       <div className="container bg-white pt-20 rounded-t-2xl h-full">
         <Title title={'Contact'} color={'black'} extraClasses="text-center md:col-start-1" />
         <h4 className="col-span-full text-center text-black text-2xl md:text-4xl font-medium">Have an idea? Get in touch!</h4>

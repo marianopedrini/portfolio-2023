@@ -6,7 +6,7 @@ import { carreerItems } from "@/data"
 
 const Carreer = () => {
   return (
-    <Section>
+    <Section id="carreer">
       <div className="container grid grid-cols-12 lg:gap-x-8">
         <Title title={'Carreer'} color={'white'} />
 

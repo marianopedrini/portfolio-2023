@@ -1,7 +1,7 @@
 const MenuIcon = ({ onClick, isActive}: { onClick: React.MouseEventHandler; isActive: boolean; }) => {
   return (
     <div
-      className="bg-black w-[54px] h-[54px] rounded-full absolute top-4 cursor-pointer group"
+      className="bg-black/90 backdrop-blur-sm w-[54px] h-[54px] rounded-full absolute top-4 cursor-pointer group"
       onClick={onClick}
     >
       <span

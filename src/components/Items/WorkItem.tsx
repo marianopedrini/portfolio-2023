@@ -10,6 +10,7 @@ const WorkItem = ({work}: {work: Work}) => {
               src={work.image.url}
               alt={work.image.alt}
               fill={true}
+              sizes="(max-width: 768px) 100vw, 428px"
               className='flex'
         />
         

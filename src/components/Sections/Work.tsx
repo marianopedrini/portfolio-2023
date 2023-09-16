@@ -6,7 +6,7 @@ import { works } from '@/data'
 
 const Work = () => {
   return (
-    <Section >
+    <Section id="work">
       <div className="container grid grid-cols-12 mb-14">
         <Title title={'Work'} color={'white'} />
       </div>

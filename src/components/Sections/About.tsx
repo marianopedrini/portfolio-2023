@@ -4,7 +4,7 @@ import Section from "@/components/Section/Section"
 
 const About = () => {
   return (
-    <Section extraClasses='flex items-center pt-[20vh]'>
+    <Section extraClasses='flex items-center pt-[20vh]' id="about">
       <div className="container h-full lg:grid grid-cols-12 lg:gap-x-8 mb-12">
         <p className="text-2xl pr-1 font-normal md:text-3xl lg:text-[38px] lg:col-start-2 lg:col-end-12 lg:leading-[42px] group">
           I am a frontend developer from Argentina, with 3 years of experience
