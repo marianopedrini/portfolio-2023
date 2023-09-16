@@ -9,7 +9,7 @@ const {main: mainSkills, other: otherSkills} = skills;
 const Skills = () => {
   return (
     <Section>
-      <div className="container grid grid-cols-12 gap-x-8">
+      <div className="container grid grid-cols-12 lg:gap-x-8">
         <Title title={'Skills'} color={'white'} />
 
         <div className="col-span-full grid grid-cols-12 grid-x-8 mt-14">

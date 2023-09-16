@@ -5,7 +5,7 @@ import { menuLinks, contactLinks } from '@/data'
 const NavMenu = ({isActive} : {isActive: boolean}) => {
   return (
     <div className={`fixed bg-black min-h-screen min-w-full container flex items-end pb-[40px] z-50 -left-full transition-all duration-700 ${isActive
-        ? '-left-0'
+        ? 'left-0'
         : ''}`}>
       <div className="container w-full grid grid-cols-12">
         <nav className="col-span-7">
