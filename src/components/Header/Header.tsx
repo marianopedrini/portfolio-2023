@@ -1,7 +1,12 @@
-import Link from "next/link";
-import MenuIcon from "./MenuIcon";
+import Link from 'next/link';
+import MenuIcon from './MenuIcon';
 
-const Header = ({ isActive, setIsActive }: { isActive: boolean; setIsActive: (active: boolean) => void; }) => {
+type HeaderProps = {
+  isActive: boolean;
+  setIsActive: (active: boolean) => void;
+};
+
+const Header = ({ isActive, setIsActive }: HeaderProps) => {
   const handleClick = () => {
     setIsActive(!isActive);
   };
@@ -9,8 +14,7 @@ const Header = ({ isActive, setIsActive }: { isActive: boolean; setIsActive: (ac
   return (
     <div className="fixed top-0 w-full z-[100]">
       <div className="container">
-        
-        <MenuIcon onClick={handleClick} isActive={isActive}/>
+        <MenuIcon onClick={handleClick} isActive={isActive} />
 
         <div className="hidden md:flex items-center justify-center">
           <div>

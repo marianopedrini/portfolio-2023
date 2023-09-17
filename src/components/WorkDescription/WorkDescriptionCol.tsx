@@ -1,6 +1,10 @@
-const WorkDescriptionCol = ({title, content}: {title: string, content: string | string[] }) => {
+type WorkDescriptionColProps = {
+    title: string, content: string | string[] 
+}
+
+const WorkDescriptionCol = ({ title, content }: WorkDescriptionColProps) => {
   return (
-    <div className="flex flex-col gap-5 text-white">
+    <div className="work-desc-col flex flex-col gap-5 text-white">
       <h5 className="text-4xl font-medium">{title}</h5>
       <div className="text-grey">
         {Array.isArray(content) ? (
@@ -15,5 +19,5 @@ const WorkDescriptionCol = ({title, content}: {title: string, content: string | 
       </div>
     </div>
   );
-}
+};
 export default WorkDescriptionCol

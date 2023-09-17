@@ -2,7 +2,9 @@ import Link from 'next/link'
 
 import { menuLinks, contactLinks } from '@/data'
 
-const NavMenu = ({isActive} : {isActive: boolean}) => {
+type NavMenuProps = {isActive: boolean}
+
+const NavMenu = ({isActive} : NavMenuProps) => {
   return (
     <div className={`fixed bg-black min-h-screen min-w-full container flex items-end pb-[40px] z-[90] -left-full transition-all duration-700 ${isActive
         ? 'left-0'

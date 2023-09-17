@@ -1,4 +1,6 @@
-const MenuIcon = ({ onClick, isActive}: { onClick: React.MouseEventHandler; isActive: boolean; }) => {
+type MenuIconProps = { onClick: React.MouseEventHandler; isActive: boolean };
+
+const MenuIcon = ({ onClick, isActive }: MenuIconProps) => {
   return (
     <div
       className="bg-black/90 backdrop-blur-sm w-[54px] h-[54px] rounded-full absolute top-4 cursor-pointer group"

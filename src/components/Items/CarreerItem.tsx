@@ -2,7 +2,11 @@
 import Link from "next/link";
 import { Company } from "@/types"
 
-const CarreerItem = ({company}: {company : Company}) => {
+type CarreerItemProps = {
+    company : Company
+}
+
+const CarreerItem = ({company}: CarreerItemProps) => {
   return (
     <div key={company.id} className="flex flex-col">
       {company.name &&

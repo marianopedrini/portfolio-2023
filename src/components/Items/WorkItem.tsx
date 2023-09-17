@@ -3,7 +3,9 @@ import Image from 'next/image'
 
 import { Work } from '@/types'
 
-const WorkItem = ({work}: {work: Work}) => {
+type WorkItemsProps = {work: Work}
+
+const WorkItem = ({work}: WorkItemsProps) => {
   return (
     <Link href={`/work/${work.slug}`} className='relative aspect-square group overflow-hidden'>
         <Image

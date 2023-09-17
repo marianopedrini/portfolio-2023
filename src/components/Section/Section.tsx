@@ -1,9 +1,20 @@
-const Section = ({children, extraClasses, id}: {children: React.ReactNode, extraClasses?: string, id?: string}) => {
-  return (
-    <section className={`w-full min-h-[100dvh] pt-32 ${extraClasses? extraClasses : ''}`} id={id}>
-        {children}
-    </section>
-  )
-}
+type SectionProps = {
+  children: React.ReactNode;
+  extraClasses?: string;
+  id?: string;
+};
 
-export default Section
+const Section = ({ children, extraClasses, id }: SectionProps) => {
+  return (
+    <section
+      className={`w-full min-h-[100dvh] pt-32 ${
+        extraClasses ? extraClasses : ''
+      }`}
+      id={id}
+    >
+      {children}
+    </section>
+  );
+};
+
+export default Section;

@@ -1,8 +1,8 @@
 import { gsap } from 'gsap'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 
 export const useGsapContext = (func: gsap.ContextFunc, deps: any[] = []) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(func);
 
     return () => {
