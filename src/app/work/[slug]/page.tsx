@@ -48,10 +48,10 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
 
         {data && (
           <div
-            className="container min-h-[100dvh] grid grid-cols-12 relative md:pt-32"
+            className="container min-h-[100dvh] pb-12 grid grid-cols-12 relative md:pb-0 md:pt-32"
             ref={containerRef}
           >
-            <div className="col-span-full absolute top-40 right-0 md:col-start-3">
+            <div className="col-span-full pt-20 md:pt-0 md:absolute top-40 right-0 md:col-start-3">
               <Image
                 src={data.image.urlBig}
                 alt={data.image.alt}
@@ -69,7 +69,7 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
               <Title
                 title={data.name}
                 color="white"
-                extraClasses="opacity-0 font-semibold h-fit text-6xl relative z-50 top-full md:text-7xl"
+                extraClasses="opacity-0 font-semibold h-fit text-4xl relative z-50 md:top-full !md:text-5xl"
                 forwardedRef={titleRef}
               />
               <WorkDescriptionWrapper

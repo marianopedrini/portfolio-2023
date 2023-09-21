@@ -13,6 +13,12 @@
   background-color: var(--black);
 }
 
+html,
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    cursor: none;
+}
+
 .contact-links li {
     position: relative;
 }

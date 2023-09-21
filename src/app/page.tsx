@@ -8,6 +8,8 @@ import Carreer from "@/components/Sections/Carreer";
 import Skills from "@/components/Sections/Skills";
 import Work from "@/components/Sections/Work";
 import Contact from "@/components/Sections/Contact";
+import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
+import Cursor from "@/components/Cursor/Cursor";
 
 export default function Home() {
   const [isMenuActive, setIsMenuActive] = useState(false)
@@ -25,13 +27,16 @@ export default function Home() {
   
   return (
     <main>
-        <NavMenu isActive={isMenuActive} />
-        <Header isActive={isMenuActive} setIsActive={setIsMenuActive}/>
-        <About />
+      <Cursor />
+      <NavMenu isActive={isMenuActive} />
+      <Header isActive={isMenuActive} setIsActive={setIsMenuActive} />
+      <About />
+      <HorizontalScroll>
         <Carreer />
         <Skills />
-        <Work />
-        <Contact />
+      </HorizontalScroll>
+      <Work />
+      <Contact />
     </main>
-  )
+  );
 }

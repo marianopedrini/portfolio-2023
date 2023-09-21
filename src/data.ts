@@ -95,7 +95,7 @@ export const skills: Skills = {
     ],
   },
   other: {
-    title: 'Other/learning',
+    title: 'Other / learning',
     items: ['Typescript', 'Laravel', 'Django', 'Express', 'SQL'],
   },
 };
@@ -138,7 +138,7 @@ export const works: Work[] = [
     },
     company: 'Freelance',
     info: 'I developed this website for Lpharma Consultores, a leading consulting firm in the market.',
-    role: '',
+    role: 'I developed this site from start to finish and was responsible for some design decisions',
     stack: ['Html', 'Css', 'Javascript'],
     links: ['https://www.lpharmaconsultores.com/'],
   },
