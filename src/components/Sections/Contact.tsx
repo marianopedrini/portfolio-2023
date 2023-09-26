@@ -6,7 +6,7 @@ import { contactLinks } from "@/data";
 
 const Contact = () => {
   return (
-    <Section extraClasses="h-[100dvh]" id="contact">
+    <Section extraClasses="h-[100dvh] md:pb-0" id="contact">
       <div className="container bg-white flex flex-col pt-20 rounded-t-2xl h-full">
         <Title
           title={'Contact'}
@@ -26,6 +26,7 @@ const Contact = () => {
                     href={navlink.link}
                     target="_blank"
                     className="text-darkgrey"
+                    data-hover
                   >
                     {navlink.appName}
                   </Link>

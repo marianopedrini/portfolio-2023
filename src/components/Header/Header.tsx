@@ -18,7 +18,7 @@ const Header = ({ isActive, setIsActive }: HeaderProps) => {
 
         <div className="hidden md:flex items-center justify-center">
           <div>
-            <Link href={'/'} className="block h-fit">
+            <Link href={'/'} className="block h-fit" data-hover>
               <h2 className="mx-auto mt-8 text-center w-fit text-[22px] leading-none tracking-[-1.5px] py-1.5 px-4 rounded-md backdrop-blur-sm bg-black/80">
                 <span className="font-semibold leading-none">Mariano</span>
                 Pedrini

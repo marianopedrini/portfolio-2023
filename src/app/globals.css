@@ -15,8 +15,8 @@
 
 html,
 body {
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    cursor: none;
+    /*overflow-x: hidden; /* Hide horizontal scrollbar */
+    /* cursor: none; */
 }
 
 .contact-links li {
@@ -29,7 +29,7 @@ body {
     width: 0;
     bottom: -2px;
     background: var(--darkgrey);
-    height: 1px;
+    height: 1.5px;
     transition-property: width;
     transition-duration: 0.2s;
     transition-timing-function: ease-out;

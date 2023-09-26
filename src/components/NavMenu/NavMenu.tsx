@@ -14,7 +14,7 @@ const NavMenu = ({isActive} : NavMenuProps) => {
           <menu className="text-7xl md:text-[100px] md:leading-[100px] text-grey flex flex-col gap-6">
             {menuLinks.map((navlink) => (
               <li className="hover:text-darkgrey w-fit" key={navlink.link}>
-                <Link href={navlink.link}>{navlink.text}</Link>
+                <Link href={navlink.link} data-hover>{navlink.text}</Link>
               </li>
             ))}
           </menu>
@@ -24,7 +24,7 @@ const NavMenu = ({isActive} : NavMenuProps) => {
           <nav className="text-grey flex flex-col gap-3 text-sm md:text-base">
             {contactLinks.map((navlink) => (
               <li className="hover:text-white list-none" key={navlink.link}>
-                <Link href={navlink.link} target="_blank">
+                <Link href={navlink.link} target="_blank" data-hover>
                   {navlink.text}
                 </Link>
               </li>

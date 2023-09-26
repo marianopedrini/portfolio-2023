@@ -3,12 +3,11 @@ import { useEffect, useState } from "react";
 
 import NavMenu from "@/components/NavMenu/NavMenu";
 import Header from "@/components/Header/Header";
+import Hero from "@/components/Sections/Hero";
 import About from "@/components/Sections/About";
-import Carreer from "@/components/Sections/Carreer";
-import Skills from "@/components/Sections/Skills";
+import Profession from "@/components/Sections/Profession";
 import Work from "@/components/Sections/Work";
 import Contact from "@/components/Sections/Contact";
-import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 import Cursor from "@/components/Cursor/Cursor";
 
 export default function Home() {
@@ -30,11 +29,9 @@ export default function Home() {
       <Cursor />
       <NavMenu isActive={isMenuActive} />
       <Header isActive={isMenuActive} setIsActive={setIsMenuActive} />
+      <Hero />
       <About />
-      <HorizontalScroll>
-        <Carreer />
-        <Skills />
-      </HorizontalScroll>
+      <Profession />
       <Work />
       <Contact />
     </main>

@@ -1,11 +1,19 @@
-type SkillItemsProps = { skill: string }
+type SkillItemsProps = {
+  title: string;
+  skills: string[];
+};
 
-const SkillItem = ({ skill }: SkillItemsProps) => {
+const SkillsList = ({ title, skills }: SkillItemsProps) => {
   return (
-    <li className="text-base md:text-xl pb-3 pt-5 pl-1 text-grey hover:bg-darkgrey/10 transition-all duration-200 border-b border-grey">
-      {skill}
-    </li>
+    <>
+      <p className="mb-8 text-2xl">{title}</p>
+      <ul>
+        {skills.map((skill) => (
+          <li key={skill} className="py-4 border-b border-grey text-grey hover:text-white transition-all select-none">{skill}</li>
+        ))}
+      </ul>
+    </>
   );
 };
 
-export default SkillItem;
+export default SkillsList;

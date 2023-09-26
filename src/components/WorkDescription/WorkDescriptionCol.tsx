@@ -17,6 +17,7 @@ const WorkDescriptionCol = ({ title, content }: WorkDescriptionColProps) => {
                   href={item}
                   target="_blank"
                   className="hover:text-darkgrey"
+                  data-hover
                 >
                   {item}
                 </Link>

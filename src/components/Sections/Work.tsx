@@ -8,7 +8,7 @@ const Work = () => {
   return (
     <Section id="work">
       <div className="container grid grid-cols-12 mb-14">
-        <Title title={'Work'} color={'white'} />
+        <Title title={'Work'} color={'white'} extraClasses="md:col-start-2"/>
       </div>
       <div className="container px-0 grid grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3">
         {works.map((work) => (

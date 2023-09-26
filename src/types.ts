@@ -11,7 +11,7 @@ export interface Company {
     description: string;
 }
 
-export interface WorkExperience {
+export interface CarreerExperience {
     period: string;
     companies: Company[]
 };

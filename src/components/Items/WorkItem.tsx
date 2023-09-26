@@ -7,7 +7,7 @@ type WorkItemsProps = {work: Work}
 
 const WorkItem = ({work}: WorkItemsProps) => {
   return (
-    <Link href={`/work/${work.slug}`} className='relative aspect-square group overflow-hidden'>
+    <Link href={`/work/${work.slug}`} className='relative aspect-square group overflow-hidden' data-hover>
         <Image
               src={work.image.url}
               alt={work.image.alt}

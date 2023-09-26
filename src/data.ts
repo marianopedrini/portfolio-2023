@@ -1,4 +1,14 @@
-import { DefaultLink, Company, WorkExperience, Skills, Work } from '@/types';
+import { DefaultLink, Company, CarreerExperience, Skills, Work } from '@/types';
+
+export const mainTitle : string = "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
+
+export const aboutTexts: string[] = [
+  "I am a frontend developer from Argentina, with 3 years of experience in web development. I'm a JavaScript enthusiast, and currently, I'm learning about advanced and high-performance animations.",
+  "I studied industrial design for a few years at UBA, which gave me a design background that I apply in my career today.",
+  "I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge"
+];
+
+
 
 export const menuLinks: DefaultLink[] = [
   {
@@ -38,7 +48,7 @@ export const contactLinks: DefaultLink[] = [
   },
 ];
 
-export const carreerItems: WorkExperience[] = [
+export const carreerItems: CarreerExperience[] = [
   {
     period: '2020',
     companies: [
@@ -96,7 +106,7 @@ export const skills: Skills = {
   },
   other: {
     title: 'Other / learning',
-    items: ['Typescript', 'Laravel', 'Django', 'Express', 'SQL'],
+    items: ['Typescript', 'Django', 'Express', 'SQL'],
   },
 };
 

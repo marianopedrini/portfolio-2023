@@ -7,8 +7,8 @@ const Cursor = () => {
     // const [cursor, setHoveringLink] = useState(false)
     const cursorRef = useRef<HTMLDivElement>(null)
     
-    useLayoutEffect(() => {
-        const links = document.querySelectorAll('a')
+    useEffect(() => {
+        const links = document.querySelectorAll('[data-hover]')
         const onMouseMove = (e:any) => {
             const {clientX, clientY} = e
             gsap.to(cursorRef.current, {
@@ -20,25 +20,19 @@ const Cursor = () => {
 
         links.forEach(link => {
             link.addEventListener('mouseover', () => {
-                setHoveringLink(true)
+                // setHoveringLink(true)
+                gsap.to(cursorRef.current, {
+                    scale: 4
+                })
             })
             link.addEventListener('mouseleave', () => {
-                setHoveringLink(false)
+                // setHoveringLink(false)
+                gsap.to(cursorRef.current, {
+                    scale: 1
+                })
             })
         } )
     }, [])
-
-    useGsapContext(() => {
-        if (hoveringLink) {
-            gsap.to(cursorRef.current, {
-                scale: 4
-            })
-        } else {
-            gsap.to(cursorRef.current, {
-                scale: 1
-            })
-        }
-    }, [cursorRef])
 
     
   return (
