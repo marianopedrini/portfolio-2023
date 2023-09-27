@@ -29,9 +29,9 @@ const Loader = ({ timeline }: any) => {
 
   return (
     <section className="h-screen flex items-center justify-center relative">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-2 md:gap-4">
         <div
-          className="flex text-7xl"
+          className="flex text-3xl md:text-7xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
           ref={mainTextRef}
         >
@@ -59,11 +59,12 @@ const Loader = ({ timeline }: any) => {
         </div>
 
         {/* Name */}
-        <h1 className="opacity-0 text-center text-4xl text-grey" ref={nameRef}>
+        <h1 className="opacity-0 text-center text-xl text-grey md:text-4xl" ref={nameRef}>
           Mariano Pedrini
         </h1>
 
-        <p className='p-12 opacity-0 absolute bottom-0 text-2xl' ref={counterRef}>0%</p>
+        {/* Counter */}
+        <p className='p-12 opacity-0 absolute bottom-0 text-grey md:text-xl' ref={counterRef}>0%</p>
       </div>
     </section>
   );

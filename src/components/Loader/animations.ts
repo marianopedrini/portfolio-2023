@@ -75,7 +75,7 @@ export const progressAnimation = (counterRef: any) => {
         opacity: 1
     }).to(counterRef.current, {
         textContent: '100%',
-        duration: 5.5,
+        duration: 5,
         roundProps: 'textContent',
         ease: 'custom'
     });

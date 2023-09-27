@@ -1,10 +1,15 @@
-type MenuIconProps = { onClick: React.MouseEventHandler; isActive: boolean };
+type MenuIconProps = {
+  onClick: React.MouseEventHandler;
+  isActive: boolean;
+  forwardRef: React.Ref<HTMLDivElement>;
+};
 
-const MenuIcon = ({ onClick, isActive }: MenuIconProps) => {
+const MenuIcon = ({ onClick, isActive, forwardRef }: MenuIconProps) => {
   return (
     <div
-      className="bg-black/90 backdrop-blur-sm w-[54px] h-[54px] rounded-full absolute top-4 cursor-pointer group"
+      className="opacity-0 bg-black/90 backdrop-blur-sm w-[54px] h-[54px] rounded-full absolute top-4 cursor-pointer group"
       onClick={onClick}
+      ref={forwardRef}
       data-hover
     >
       <span

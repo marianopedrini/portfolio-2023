@@ -1,6 +1,6 @@
 import { DefaultLink, Company, CarreerExperience, Skills, Work } from '@/types';
 
-export const mainTitle : string = "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
+export const mainPhrase : string = "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
 
 export const aboutTexts: string[] = [
   "I am a frontend developer from Argentina, with 3 years of experience in web development. I'm a JavaScript enthusiast, and currently, I'm learning about advanced and high-performance animations.",
