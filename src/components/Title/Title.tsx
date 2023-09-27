@@ -1,11 +1,12 @@
 type TitleProps = {
   title: string;
   color: string;
+  id?: string;
   extraClasses?: string;
   forwardedRef?: React.RefObject<HTMLHeadingElement>;
 };
 
-const Title = ({ title, color, extraClasses, forwardedRef }: TitleProps) => {
+const Title = ({ title, color, id, extraClasses, forwardedRef }: TitleProps) => {
   return (
     <h3
       className={`text-6xl col-auto md:text-[82px] ${
@@ -13,6 +14,7 @@ const Title = ({ title, color, extraClasses, forwardedRef }: TitleProps) => {
       }
       ${extraClasses ? extraClasses : ''}`}
       ref={forwardedRef}
+      id={id}
     >
       {title}
     </h3>

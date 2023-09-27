@@ -2,7 +2,7 @@ type SectionProps = {
   children: React.ReactNode
   extraClasses?: string
   id?: string
-  forwardedRef?: React.RefObject<HTMLHeadingElement>
+  forwardedRef?: React.RefObject<HTMLElement>
   heightFit?: boolean
 };
 

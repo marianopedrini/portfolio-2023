@@ -14,7 +14,6 @@ export const animateText = (containerRef: any) => {
         start: 'top 90%',
         end: 'center 10%',
         toggleActions: 'play reverse play reverse',
-        markers: true,
       },
     });
     tl2.fromTo(

@@ -11,7 +11,7 @@ type CompanyItemProps = {
 
 const CarreerItem = ({ item }: CarreerItemProps) => {
   return (
-    <li className="flex items-center">
+    <li className="opacity-0 flex items-center" data-carreer-item>
       <p className="text-xl w-14 text-center md:text-2xl">{item.period}</p>
       <div className="ml-4 flex-1 flex flex-col gap-6 border-l border-l-white pl-4 md:text-xl">
         {item.companies.map((company) => (
