@@ -4,8 +4,6 @@ export const animatePhrase = (containerRef: any, splittedPhrase: any) => {
   const phraseLines = splittedPhrase.lines;
   const tl = gsap.timeline({});
 
-  gsap.set('lineText', { overflow: 'hidden' });
-
   tl.fromTo(
     phraseLines,
     {
