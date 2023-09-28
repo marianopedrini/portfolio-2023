@@ -15,8 +15,41 @@
 
 html,
 body {
-    /*overflow-x: hidden; /* Hide horizontal scrollbar */
     /* cursor: none; */
+}
+/* ===== Scrollbar CSS ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--grey);
+  border: 2px solid var(--black);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
+}
+::-webkit-scrollbar-thumb:active {
+  background: var(--grey);
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #00000000;
+}
+::-webkit-scrollbar-track:active {
+  background: #00000000;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .contact-links li {

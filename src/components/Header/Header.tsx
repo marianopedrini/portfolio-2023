@@ -1,18 +1,16 @@
-import { useEffect, useRef } from 'react';
+'use client'
+import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
 
-import Link from 'next/link';
-import MenuIcon from './MenuIcon';
+import NavMenu from '@/components/NavMenu/NavMenu';
+import MenuIcon from '@/components/Header/MenuIcon';
 
 import { animateMenu } from './animations';
 
-type HeaderProps = {
-  isActive: boolean;
-  setIsActive: (active: boolean) => void;
-};
-
-const Header = ({ isActive, setIsActive }: HeaderProps) => {
+const Header = () => {
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const timeline = useRef(gsap.timeline());
   const iconRef = useRef(null);
   const nameRef = useRef(null);
@@ -32,34 +30,37 @@ const Header = ({ isActive, setIsActive }: HeaderProps) => {
   }, []);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    setIsMenuActive(!isMenuActive);
   };
 
   return (
-    <div className="fixed top-0 w-full z-[100]">
-      <div className="container">
-        <MenuIcon
-          onClick={handleClick}
-          isActive={isActive}
-          forwardRef={iconRef}
-        />
+    <>
+      <NavMenu isActive={isMenuActive} />
+      <div className="fixed top-0 w-full z-[100]">
+        <div className="container">
+          <MenuIcon
+            onClick={handleClick}
+            isActive={isMenuActive}
+            forwardRef={iconRef}
+          />
 
-        <div className="hidden md:flex items-center justify-center">
-          <div>
-            <Link href={'/'} data-hover>
-              <h4
-                id="name"
-                className="opacity-0 overflow-hidden mx-auto mt-8 text-center w-fit leading-none text-[22px]"
-                ref={nameRef}
-              >
-                <span className="font-semibold">Mariano</span>
-                Pedrini
-              </h4>
-            </Link>
+          <div className="hidden md:flex items-center justify-center">
+            <div>
+              <Link href={'/'} data-hover>
+                <h4
+                  id="name"
+                  className="opacity-0 overflow-hidden mx-auto mt-8 text-center w-fit leading-none text-[22px]"
+                  ref={nameRef}
+                >
+                  <span className="font-semibold">Mariano</span>
+                  Pedrini
+                </h4>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

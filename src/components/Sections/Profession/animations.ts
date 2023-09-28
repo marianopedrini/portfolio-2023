@@ -19,7 +19,6 @@ export const animateCarreer = (sectionRef: any, carreerTitleRef: any, splittedCa
         stagger: 0.1,
         scrollTrigger: {
             trigger: sectionRef.current,
-            markers: true,
             start: 'top 60%',
         },
         duration: 0.6
@@ -36,7 +35,6 @@ export const animateCarreer = (sectionRef: any, carreerTitleRef: any, splittedCa
         stagger: 0.3,
         scrollTrigger: {
             trigger: sectionRef.current,
-            markers: true,
             start: 'top 60%',
         },
         delay: 1
@@ -62,7 +60,6 @@ export const animateSkills = (sectionRef: any, skillsTitleRef: any, splittedSkil
         stagger: 0.1,
         scrollTrigger: {
             trigger: sectionRef.current,
-            markers: true,
             start: 'top 60%',
         },
         duration: 0.6
@@ -76,7 +73,7 @@ export const animateSkills = (sectionRef: any, skillsTitleRef: any, splittedSkil
           stagger: 0.2,
           scrollTrigger: {
               trigger: sectionRef.current,
-              markers: true,
+
               start: 'top 60%',
           },
           delay: 1
@@ -91,7 +88,6 @@ export const animateSkills = (sectionRef: any, skillsTitleRef: any, splittedSkil
         stagger: 0.1,
         scrollTrigger: {
             trigger: sectionRef.current,
-            markers: true,
             start: 'top 60%',
         },
         delay: 1.5

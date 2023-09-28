@@ -1,10 +1,13 @@
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const animatePhrase = (containerRef: any, splittedPhrase: any) => {
   const phraseLines = splittedPhrase.lines;
   const tl = gsap.timeline({});
 
-  tl.fromTo(
+  gsap.fromTo(
     phraseLines,
     {
       opacity: 0,
@@ -14,6 +17,12 @@ export const animatePhrase = (containerRef: any, splittedPhrase: any) => {
       opacity: 1,
       x: 0,
       stagger: 0.2,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top 60%',
+        end: 'bottom 20%',
+        toggleActions: "play reverse play reverse",
+      }
     }
   );
 
