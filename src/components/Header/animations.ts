@@ -9,7 +9,6 @@ export const animateMenu = (iconRef: any, nameLetters: any) => {
     y: 0,
     opacity: 1
   }).fromTo(nameLetters,{
-    opacity: 0,
     y: 20,
   },{
     opacity: 1,

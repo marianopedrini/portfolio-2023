@@ -51,6 +51,7 @@ const Hero = () => {
               className="opacity-0 col-start-2 col-end-3 ml-2 mt-10"
               src="/about-arrow.svg"
               alt="Arrow pointing down"
+              priority 
               width={8}
               height={73}
               ref={arrowRef}

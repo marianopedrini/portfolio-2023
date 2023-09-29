@@ -15,9 +15,8 @@ const Work = () => {
 
   useLayoutEffect(() => {
     const context = gsap.context(() => {
-      const tl = timeline.current;
-
-      tl.add(animateTitle(titleRef)).add(animateCards(cardContainerRef));
+      animateTitle(titleRef);
+      animateCards(cardContainerRef);
     });
 
     return () => context.revert();
@@ -35,6 +34,8 @@ const Work = () => {
       </div>
       <div
         className="container px-0 grid grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3"
+        // style={{ clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' }}
+        style={{ clipPath: 'circle(0% at 50% 0)' }}
         ref={cardContainerRef}
       >
         {works.map((work) => (
