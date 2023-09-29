@@ -12,13 +12,13 @@ const About = () => {
   const timeline = useRef(gsap.timeline());
 
   useLayoutEffect(() => {
-    const context = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const tl = timeline.current;
 
       tl.add(animateText(containerRef));
     });
 
-    return () => context.revert();
+    return () => ctx.revert();
   }, []);
 
   return (

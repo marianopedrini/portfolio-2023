@@ -27,15 +27,12 @@ const Profession = () => {
       types: 'chars',
     });
 
-    const context = gsap.context(() => {
-      const tl = timeline.current;
-
-      tl.add(animateCarreer(sectionRef, carreerTitleRef, splittedCarreer)).add(
+    const ctx = gsap.context(() => {
+        animateCarreer(sectionRef, carreerTitleRef, splittedCarreer)
         animateSkills(sectionRef, skillsTitleRef, splittedSkills)
-      );
     });
 
-    return () => context.revert();
+    return () => ctx.revert();
   }, []);
 
   return (

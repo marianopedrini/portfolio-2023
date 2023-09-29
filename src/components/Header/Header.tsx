@@ -17,7 +17,7 @@ const Header = () => {
 
   useLayoutEffect(() => {
     const nameLetters = new SplitType('#name', { types: 'chars' });
-    const context = gsap.context(() => {
+    const ctx = gsap.context(() => {
       gsap.set(nameRef.current, {
         opacity: 1,
       });
@@ -26,7 +26,7 @@ const Header = () => {
       tl.add(animateMenu(iconRef, nameLetters.chars));
     });
 
-    return () => context.revert();
+    return () => ctx.revert();
   }, []);
 
   const handleClick = () => {

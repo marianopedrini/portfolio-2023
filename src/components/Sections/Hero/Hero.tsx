@@ -21,7 +21,7 @@ const Hero = () => {
       types: 'lines',
     });
 
-    const context = gsap.context(() => {
+    const ctx = gsap.context(() => {
       gsap.set(phraseRef.current, {
         opacity: 1,
       });
@@ -32,7 +32,7 @@ const Hero = () => {
       );
     });
 
-    return () => context.revert();
+    return () => ctx.revert();
   }, []);
 
   return (

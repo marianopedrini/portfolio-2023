@@ -14,12 +14,12 @@ const Work = () => {
   const timeline = useRef(gsap.timeline());
 
   useLayoutEffect(() => {
-    const context = gsap.context(() => {
+    const ctx = gsap.context(() => {
       animateTitle(titleRef);
       animateCards(cardContainerRef);
     });
 
-    return () => context.revert();
+    return () => ctx.revert();
   }, []);
 
   return (
