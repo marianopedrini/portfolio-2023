@@ -1,7 +1,4 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-
-import { useGsapContext } from '@/hooks/useGsapContext';
+import { useLayoutEffect, useRef } from 'react';
 
 import {
   mainTextAnimation,
@@ -18,7 +15,7 @@ const Loader = ({ timeline }: any) => {
   const nameRef = useRef<HTMLHeadingElement>(null);
   const counterRef = useRef<HTMLParagraphElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     timeline &&
       timeline
         .add(mainTextAnimation(frontendWordRef, developerWordRef, lineRef))

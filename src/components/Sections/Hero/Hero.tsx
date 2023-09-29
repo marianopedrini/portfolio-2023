@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
@@ -16,7 +16,7 @@ const Hero = () => {
   const arrowRef = useRef<HTMLImageElement>(null);
   const timeline = useRef(gsap.timeline());
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const splittedPhrase = new SplitType('#mainPhrase', {
       types: 'lines',
     });

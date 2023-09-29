@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 import Section from '@/components/Section/Section';
@@ -11,7 +11,7 @@ const About = () => {
   const containerRef = useRef(null);
   const timeline = useRef(gsap.timeline());
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const context = gsap.context(() => {
       const tl = timeline.current;
 

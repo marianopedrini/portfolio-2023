@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Title from '@/components/Title/Title';
 import WorkItem from '@/components/Items/WorkItem';
@@ -13,7 +13,7 @@ const Work = () => {
   const cardContainerRef = useRef<HTMLDivElement>(null);
   const timeline = useRef(gsap.timeline());
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const context = gsap.context(() => {
       const tl = timeline.current;
 

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { useGsapContext } from "@/hooks/useGsapContext"
 
@@ -7,7 +7,7 @@ const Cursor = () => {
     // const [cursor, setHoveringLink] = useState(false)
     const cursorRef = useRef<HTMLDivElement>(null)
     
-    useEffect(() => {
+    useLayoutEffect(() => {
         const links = document.querySelectorAll('[data-hover]')
         const onMouseMove = (e:any) => {
             const {clientX, clientY} = e

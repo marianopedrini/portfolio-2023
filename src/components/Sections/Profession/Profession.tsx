@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
 
@@ -19,7 +19,7 @@ const Profession = () => {
   const skillsTitleRef = useRef<HTMLHeadingElement>(null);
   const timeline = useRef(gsap.timeline());
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const splittedCarreer = new SplitType('#carreerTitle', {
       types: 'chars',
     });

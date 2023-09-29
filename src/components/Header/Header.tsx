@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react';
+import { useState, useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
@@ -15,7 +15,7 @@ const Header = () => {
   const iconRef = useRef(null);
   const nameRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const nameLetters = new SplitType('#name', { types: 'chars' });
     const context = gsap.context(() => {
       gsap.set(nameRef.current, {
