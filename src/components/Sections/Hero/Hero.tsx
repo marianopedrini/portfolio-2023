@@ -52,7 +52,7 @@ const Hero = () => {
               src="/about-arrow.svg"
               alt="Arrow pointing down"
               priority 
-              width={8}
+              width={14}
               height={73}
               ref={arrowRef}
             />

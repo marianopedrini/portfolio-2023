@@ -33,6 +33,11 @@ export const animateArrow = (arrowRef: any) => {
   const tl = gsap.timeline({});
   tl.to(arrowRef.current, {
     opacity: 1,
-  });
+  }).to(arrowRef.current, {
+      y: -10,
+      repeat : -1,
+      yoyo: true,
+      duration: 1
+  })
   return tl;
 };
