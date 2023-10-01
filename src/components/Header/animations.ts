@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 
-export const animateMenu = (iconRef: any, nameLetters: any) => {
+export const animateHeader = (iconRef: any, nameLetters: any) => {
   const tl = gsap.timeline();
 
   tl.fromTo(iconRef.current, {
@@ -9,7 +9,7 @@ export const animateMenu = (iconRef: any, nameLetters: any) => {
     y: 0,
     opacity: 1
   }).fromTo(nameLetters,{
-    y: 20,
+    y: 25,
   },{
     opacity: 1,
     y: 0,

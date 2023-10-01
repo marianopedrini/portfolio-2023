@@ -7,11 +7,10 @@ import SplitType from 'split-type';
 import NavMenu from '@/components/NavMenu/NavMenu';
 import MenuIcon from '@/components/Header/MenuIcon';
 
-import { animateMenu } from './animations';
+import { animateHeader } from './animations';
 
 const Header = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const timeline = useRef(gsap.timeline());
   const iconRef = useRef(null);
   const nameRef = useRef(null);
 
@@ -21,9 +20,8 @@ const Header = () => {
       gsap.set(nameRef.current, {
         opacity: 1,
       });
-      const tl = timeline.current;
 
-      tl.add(animateMenu(iconRef, nameLetters.chars));
+        animateHeader(iconRef, nameLetters.chars);
     });
 
     return () => ctx.revert();
@@ -35,7 +33,7 @@ const Header = () => {
 
   return (
     <>
-      <NavMenu isActive={isMenuActive} />
+      <NavMenu isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
       <div className="fixed top-0 w-full z-[100]">
         <div className="container">
           <MenuIcon
@@ -46,7 +44,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center justify-center">
             <div>
-              <Link href={'/'} data-hover>
+              <Link href={'/'} onClick={() => setIsMenuActive(false)} data-hover>
                 <h4
                   id="name"
                   className="opacity-0 overflow-hidden mx-auto mt-8 text-center w-fit leading-none text-[22px]"
