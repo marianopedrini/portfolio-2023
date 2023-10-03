@@ -109,7 +109,6 @@ export const skills: Skills = {
     items: ['Typescript', 'Django', 'Express', 'SQL'],
   },
 };
-
 export const works: Work[] = [
   {
     slug: 'calsa',
@@ -124,6 +123,20 @@ export const works: Work[] = [
     role: 'I was responsible for maintaining the site and implementing new features requested by the client.',
     stack: ['Html', 'Css', 'Javascript', 'Laravel', 'Vue'],
     links: ['https://www.calsa.com.ar'],
+  },
+  {
+    slug: 'studio-ghibli',
+    name: 'Studio Ghibli',
+    image: {
+      url: '/calsa-sq.png',
+      urlBig: '/ghibli.png',
+      alt: 'Image of a woman making bread',
+    },
+    company: 'The Sandbox',
+    info: 'Own project created to reinforce concepts such as API integration, handling favorites (stored in LocalStorage), basic animations, and error or empty state management.',
+    role: 'Both the development and the simple design were carried out by me. I did the design in Figma, and I implemented the development using React and Tailwind CSS.',
+    stack: ['Html', 'Css', 'Javascript', 'React', 'Tailwind'],
+    links: ['https://studio-ghibli-mp.vercel.app/'],
   },
   {
     slug: 'salud-digestiva',

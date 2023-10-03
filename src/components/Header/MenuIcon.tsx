@@ -13,16 +13,16 @@ const MenuIcon = ({ onClick, isActive, forwardRef }: MenuIconProps) => {
       data-hover
     >
       <span
-        className={`block h-[1px] w-[30px] bg-grey absolute top-[23px] left-3 transition-all duration-500 ${
+        className={`block h-[1px] w-[30px] bg-grey absolute top-[23px] left-3 transition-all duration-700 delay-150 ${
           isActive
-            ? 'top-[27px] rotate-[225deg] transition-transform'
+            ? 'top-[27px] rotate-[225deg] transition-all'
             : 'group-hover:w-[34px]'
         }`}
       ></span>
       <span
-        className={`block h-[1px] w-[30px] bg-grey absolute bottom-[23px] left-3 transition-all duration-500 ${
+        className={`block h-[1px] w-[30px] bg-grey absolute bottom-[23px] left-3 transition-all duration-700 delay-150 ${
           isActive
-            ? 'bottom-[26px] origin-center -rotate-[225deg] transition-transform'
+            ? 'bottom-[26px] origin-center -rotate-[225deg] transition-all'
             : 'group-hover:w-[26px]'
         }`}
       ></span>
