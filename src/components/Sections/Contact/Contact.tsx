@@ -21,7 +21,7 @@ const Contact = () => {
     }, [])
 
   return (
-    <Section extraClasses="h-[100dvh] md:pb-0" id="contact" forwardedRef={contactSectionRef}>
+    <Section extraClasses="h-[100dvh] md:py-0" id="contact" forwardedRef={contactSectionRef}>
       <div className="container bg-white flex flex-col pt-20 rounded-t-2xl h-full" ref={contactCardRef}>
         <Title
           title={'Contact'}

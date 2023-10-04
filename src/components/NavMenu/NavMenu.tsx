@@ -13,6 +13,10 @@ const NavMenu = ({ isMenuActive, setIsMenuActive }: NavMenuProps) => {
   const contactTitleRef = useRef<HTMLHeadingElement>(null);
   const timeline = useRef(gsap.timeline());
 
+  // TODO --------------------------------------------------
+  // TODO Agregar el background gris a la animacion del menu
+  // TODO --------------------------------------------------
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const tl = timeline.current;
@@ -77,7 +81,7 @@ const NavMenu = ({ isMenuActive, setIsMenuActive }: NavMenuProps) => {
         </div>
       </div>
       <div
-        className="fixed -left-full bg-darknessgrey w-full h-full z-10"
+        className="opacity-0 fixed -left-full bg-darknessgrey w-full h-full z-10"
         ref={bgRef}
       ></div>
     </>

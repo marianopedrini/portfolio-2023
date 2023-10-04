@@ -4,12 +4,11 @@ import { gsap } from 'gsap';
 
 import Loader from '@/components/Loader/Loader';
 import Header from '@/components/Header/Header';
-import ScrollBar from '@/components/ScrollBar/ScrollBar';
 import Hero from '@/components/Sections/Hero/Hero';
 import About from '@/components/Sections/About/About';
 import Profession from '@/components/Sections/Profession/Profession';
 import Work from '@/components/Sections/Work/Work';
-import Contact from '@/components/Sections/Contact';
+import Contact from '@/components/Sections/Contact/Contact';
 import Cursor from '@/components/Cursor/Cursor';
 
 import { useGsapContext } from '@/hooks/useGsapContext';
@@ -42,26 +41,25 @@ export default function Home() {
   return (
     <main>
       {/* <Cursor /> */}
-      {/* {isLoading ? (
+      {isLoading ? (
         <Loader timeline={timeline} />
       ) : (
         <>
           <Header />
-          <ScrollBar />
           <Hero />
           <About />
           <Profession />
           <Work />
           <Contact />
         </>
-      )} */}
+      )}
 
-      <Header />
+      {/* <Header />
       <Hero />
       <About />
       <Profession />
       <Work />
-      <Contact />
+      <Contact /> */}
     </main>
   );
 }
