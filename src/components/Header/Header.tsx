@@ -1,5 +1,5 @@
-'use client'
-import { useState, useLayoutEffect, useRef } from 'react';
+'use client';
+import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
@@ -7,13 +7,31 @@ import SplitType from 'split-type';
 import NavMenu from '@/components/NavMenu/NavMenu';
 import MenuIcon from '@/components/Header/MenuIcon';
 
+import { useScrollDirection } from '@/hooks/useScrollDirection';
+
 import { animateHeader } from './animations';
 
 const Header = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const iconRef = useRef(null);
   const nameRef = useRef(null);
+  const scrollDirection = useScrollDirection();
 
+  useEffect(() => {
+    if (scrollDirection === 'down') {
+      gsap.to(nameRef.current, {
+        yPercent: -400,
+        opacity: 1,
+      });
+    } else {
+      gsap.to(nameRef.current, {
+        yPercent: 0,
+        opacity: 1,
+      });
+    }
+  }, [scrollDirection]);
+
+  // Animations
   useLayoutEffect(() => {
     const nameLetters = new SplitType('#name', { types: 'chars' });
     const ctx = gsap.context(() => {
@@ -21,7 +39,7 @@ const Header = () => {
         opacity: 1,
       });
 
-        animateHeader(iconRef, nameLetters.chars);
+      animateHeader(iconRef, nameLetters.chars);
     });
 
     return () => ctx.revert();
@@ -44,7 +62,11 @@ const Header = () => {
 
           <div className="hidden md:flex items-center justify-center">
             <div>
-              <Link href={'/'} onClick={() => setIsMenuActive(false)} data-hover>
+              <Link
+                href={'/'}
+                onClick={() => setIsMenuActive(false)}
+                data-hover
+              >
                 <h4
                   id="name"
                   className="opacity-0 overflow-hidden mx-auto mt-8 text-center w-fit leading-none text-[22px]"

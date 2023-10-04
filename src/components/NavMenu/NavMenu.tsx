@@ -77,7 +77,7 @@ const NavMenu = ({ isMenuActive, setIsMenuActive }: NavMenuProps) => {
         </div>
       </div>
       <div
-        className="absolute -left-full bg-darknessgrey w-full h-full z-10"
+        className="fixed -left-full bg-darknessgrey w-full h-full z-10"
         ref={bgRef}
       ></div>
     </>
