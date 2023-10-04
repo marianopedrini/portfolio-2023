@@ -66,7 +66,7 @@ const WorkDescription = ({ selected }: { selected: string }) => {
 };
 
 const WorkDetail = ({ selectedWork }: { selectedWork: Work }) => {
-  const { info, role, stack, links } = selectedWork;
+  const { info, company, role, stack, links } = selectedWork;
 
   return (
     <div
@@ -77,7 +77,7 @@ const WorkDetail = ({ selectedWork }: { selectedWork: Work }) => {
       }`}
       id="workDetail"
     >
-      <WorkDetailCol title="Info" content={info} />
+      <WorkDetailCol title="Info" content={info} company={company}/>
 
       <WorkDetailCol title="Role" content={role} />
 
@@ -91,9 +91,11 @@ const WorkDetail = ({ selectedWork }: { selectedWork: Work }) => {
 const WorkDetailCol = ({
   title,
   content,
+  company
 }: {
   title: string;
   content: string | string[];
+  company?: string
 }) => {
   const createUl = (content: string[]) => {
     return (
@@ -120,6 +122,7 @@ const WorkDetailCol = ({
   return (
     <div className="work-desc-col flex flex-col gap-5 text-white">
       <h5 className="text-4xl font-medium">{title}</h5>
+      {company && <h6>Company: {company}</h6>}
       <div className="text-grey">
         {Array.isArray(content) ? createUl(content) : content}
       </div>

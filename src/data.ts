@@ -132,7 +132,7 @@ export const works: Work[] = [
       urlBig: '/ghibli.png',
       alt: 'Image of a woman making bread',
     },
-    company: 'The Sandbox',
+    company: 'Personal Project',
     info: 'Own project created to reinforce concepts such as API integration, handling favorites (stored in LocalStorage), basic animations, and error or empty state management.',
     role: 'Both the development and the simple design were carried out by me. I did the design in Figma, and I implemented the development using React and Tailwind CSS.',
     stack: ['Html', 'Css', 'Javascript', 'React', 'Tailwind'],
@@ -177,5 +177,6 @@ export const works: Work[] = [
     info: 'UGD (Un Gran Día) is an app created to support smokers on their journey to quit smoking. It was developed in collaboration with the Argentine Association of Respiratory Medicine (AAMR).',
     role: "I was part of the application's development from the beginning to its first release on the app stores.",
     stack: ['Html', 'Css', 'Javascript', 'Ionic', 'Angular'],
+    links: ['https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749'],
   },
 ];
