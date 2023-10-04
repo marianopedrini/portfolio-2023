@@ -28,6 +28,7 @@ export interface Skills {
 }
 
 export interface Work {
+    id: number,
     slug: string,
     name: string,
     image: {

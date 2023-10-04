@@ -9,27 +9,19 @@ import { Work } from '@/types';
 import { works } from '@/data';
 import { animateDetail } from './animations';
 
-const defaultSelectedWork = works[0];
-
-const WorkDescription = ({ selected }: { selected: string }) => {
-  const [selectedWork, setSelectedWork] = useState(defaultSelectedWork);
+const WorkDescription = ({ selectedWork }: { selectedWork: Work }) => {
   const timeline = useRef(gsap.timeline());
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useLayoutEffect(() => {
-    const filteredWork = works.find((work) => work.name === selected);
-    if (filteredWork ) {
-        setSelectedWork(filteredWork);
-    }
-
     const ctx = gsap.context(() => {
       animateDetail(titleRef, imgRef);
     }, [containerRef]);
 
     return () => ctx.revert();
-  }, [selected]);
+  }, [selectedWork]);
 
   return (
     <>
@@ -44,7 +36,7 @@ const WorkDescription = ({ selected }: { selected: string }) => {
               {selectedWork.name}
             </h4>
             {/* Background */}
-            <div className='relative opacity-0' ref={imgRef}>
+            <div className="relative opacity-0" ref={imgRef}>
               <Image
                 src={selectedWork.image.urlBig}
                 alt={selectedWork.image.alt}
@@ -77,7 +69,7 @@ const WorkDetail = ({ selectedWork }: { selectedWork: Work }) => {
       }`}
       id="workDetail"
     >
-      <WorkDetailCol title="Info" content={info} company={company}/>
+      <WorkDetailCol title="Info" content={info} company={company} />
 
       <WorkDetailCol title="Role" content={role} />
 
@@ -91,11 +83,11 @@ const WorkDetail = ({ selectedWork }: { selectedWork: Work }) => {
 const WorkDetailCol = ({
   title,
   content,
-  company
+  company,
 }: {
   title: string;
   content: string | string[];
-  company?: string
+  company?: string;
 }) => {
   const createUl = (content: string[]) => {
     return (

@@ -1,22 +1,30 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 
 import Grid from '@/components/Grid/Grid';
-
-import { works } from '@/data';
 import WorkTabs from '@/components/Sections/Work/WorkTabs';
 import WorkDescription from '@/components/Sections/Work/WorkDescription';
 
+import { Work } from '@/types';
+import { works } from '@/data';
 
+const preSelectedWork = works[0]
 
 const WorkWrapper = () => {
-  const [selected, setSelected] = useState('calsa');
+  const [selectedID, setSelectedID] = useState(1);
+  const [selectedWork, setSelectedWork] = useState<Work>(preSelectedWork);
 
+  useEffect(() => {
+    const workByID = works.find(work => work.id === selectedID) || preSelectedWork
+    setSelectedWork(workByID);
+  }, [selectedID]);
+
+    // armar objewto de datos y pasarselo a WorkDescription
   return (
     <div className="container">
       <Grid extraClasses="relative">
-        <WorkTabs selected={selected} setSelected={setSelected} />
-        <WorkDescription selected={selected} />
+        <WorkTabs selectedID={selectedID} setSelectedID={setSelectedID} />
+        <WorkDescription selectedWork={selectedWork} />
       </Grid>
     </div>
   );

@@ -111,6 +111,7 @@ export const skills: Skills = {
 };
 export const works: Work[] = [
   {
+    id: 1,
     slug: 'calsa',
     name: 'Calsa',
     image: {
@@ -125,6 +126,7 @@ export const works: Work[] = [
     links: ['https://www.calsa.com.ar'],
   },
   {
+    id: 2,
     slug: 'studio-ghibli',
     name: 'Studio Ghibli',
     image: {
@@ -139,6 +141,7 @@ export const works: Work[] = [
     links: ['https://studio-ghibli-mp.vercel.app/'],
   },
   {
+    id: 3,
     slug: 'salud-digestiva',
     name: 'Salud Digestiva',
     image: {
@@ -152,6 +155,7 @@ export const works: Work[] = [
     stack: ['Html', 'Css', 'Javascript', 'Laravel'],
   },
   {
+    id: 4,
     slug: 'lpharma-consultores',
     name: 'Lpharma',
     image: {
@@ -166,6 +170,7 @@ export const works: Work[] = [
     links: ['https://www.lpharmaconsultores.com/'],
   },
   {
+    id: 5,
     slug: 'ugd',
     name: 'Un gran dia',
     image: {
