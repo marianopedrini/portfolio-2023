@@ -53,31 +53,28 @@ const Header = () => {
     <>
       <NavMenu isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
       <div className="fixed top-0 w-full z-[100]">
-        <div className="container">
+        <div className="container relative">
           <MenuIcon
             onClick={handleClick}
             isActive={isMenuActive}
             forwardRef={iconRef}
           />
 
-          <div className="hidden md:flex items-center justify-center">
-            <div>
-              <Link
-                href={'/'}
-                onClick={() => setIsMenuActive(false)}
-                data-hover
-              >
-                <h4
-                  id="name"
-                  className="opacity-0 overflow-hidden mx-auto mt-8 text-center w-fit leading-none text-[22px]"
-                  ref={nameRef}
-                >
-                  <span className="font-semibold">Mariano</span>
-                  Pedrini
-                </h4>
-              </Link>
-            </div>
-          </div>
+          <Link
+            href={'/'}
+            onClick={() => setIsMenuActive(false)}
+            data-hover
+            className="hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:inline-block"
+          >
+            <h4
+              id="name"
+              className="opacity-0 overflow-hidden mx-auto mt-8 text-center w-fit leading-none text-[22px]"
+              ref={nameRef}
+            >
+              <span className="font-semibold">Mariano</span>
+              Pedrini
+            </h4>
+          </Link>
         </div>
       </div>
     </>
