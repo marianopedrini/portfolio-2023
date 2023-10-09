@@ -53,7 +53,7 @@ const Hero = () => {
               alt="Arrow pointing down"
               priority 
               width={14}
-              height={73}
+              height={62}
               ref={arrowRef}
             />
           </div>

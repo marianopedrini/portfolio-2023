@@ -26,7 +26,7 @@ const CompanyItem = ({ company }: CompanyItemProps) => {
     const returnTitle = () => {
         if (company.link) {
             return (
-                <Link href={company.link} target="_blank" className="font-medium text-grey block mb-1" data-hover>
+                <Link href={company.link} target="_blank" className="font-medium text-grey block mb-1 w-fit" data-hover>
                     {company.name}
                 </Link>
             );
