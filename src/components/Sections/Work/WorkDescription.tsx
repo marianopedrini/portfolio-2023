@@ -75,7 +75,7 @@ const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
                 {work.links.length > 1 ? 'Links' : 'Link'}
               </h5>
               {work.links.map((link) => (
-                <Link href={link} key={link} target="_blank">
+                <Link href={link} key={link} target="_blank" data-hover>
                   <Image
                     src={'/link.svg'}
                     alt="Link Icon"
