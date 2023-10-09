@@ -53,6 +53,8 @@ export const carreerItems: CarreerExperience[] = [
     companies: [
       {
         id: 1,
+        link: 'https://www.digitalhouse.com/ar',
+        name: 'Digital House',
         description: 'I started learning web development.',
       },
     ],
@@ -80,7 +82,7 @@ export const carreerItems: CarreerExperience[] = [
       {
         id: 4,
         link: 'https://egodesign.io/',
-        name: 'Agencia Ego - Software Developer. ',
+        name: 'Ego Agency - Software Developer.',
         description:
           'I’m currently working at Agencia Ego, creating experiences for important international brands recognized worldwide. I work with HTML, CSS, Javascript, React and Python (Django).',
       },
