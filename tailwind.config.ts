@@ -7,11 +7,11 @@ const config: Config = {
   theme: {
     colors: {
         'white': '#E8E8E8',
+        'ultrablack': '#000000',
         'black': '#101010',
         'grey': '#989898',
         'darkgrey': '#5E5E5E',
         'darknessgrey': '#212121',
-        'red': '#dc2626'
     },
     container: {
       // container centered
