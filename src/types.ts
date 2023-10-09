@@ -32,7 +32,6 @@ export interface Work {
     slug: string,
     name: string,
     image: {
-        urlBig: string,
         url: string,
         alt: string
     }

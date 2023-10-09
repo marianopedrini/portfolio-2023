@@ -1,14 +1,13 @@
 import { DefaultLink, Company, CarreerExperience, Skills, Work } from '@/types';
 
-export const mainPhrase : string = "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
+export const mainPhrase: string =
+  "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
 
 export const aboutTexts: string[] = [
   "I am a frontend developer from Argentina, with 3 years of experience in web development. I'm a JavaScript enthusiast, and currently, I'm learning about advanced and high-performance animations.",
-  "I studied industrial design for a few years at UBA, which gave me a design background that I apply in my career today.",
-  "I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge"
+  'I studied industrial design for a few years at UBA, which gave me a design background that I apply in my career today.',
+  'I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge',
 ];
-
-
 
 export const menuLinks: DefaultLink[] = [
   {
@@ -115,8 +114,7 @@ export const works: Work[] = [
     slug: 'calsa',
     name: 'Calsa',
     image: {
-      url: '/calsa-sq.png',
-      urlBig: '/calsa.png',
+      url: '/calsa.png',
       alt: 'Image of a woman making bread',
     },
     company: 'The Sandbox',
@@ -130,8 +128,7 @@ export const works: Work[] = [
     slug: 'studio-ghibli',
     name: 'Studio Ghibli',
     image: {
-      url: '/calsa-sq.png',
-      urlBig: '/ghibli.png',
+      url: '/ghibli.png',
       alt: 'Image of a woman making bread',
     },
     company: 'Personal Project',
@@ -145,8 +142,7 @@ export const works: Work[] = [
     slug: 'salud-digestiva',
     name: 'Salud Digestiva',
     image: {
-      urlBig: '/salud.png',
-      url: '/salud-sq.png',
+      url: '/salud.png',
       alt: 'Image of macbook pro with the site as background',
     },
     company: 'The Sandbox',
@@ -159,8 +155,7 @@ export const works: Work[] = [
     slug: 'lpharma-consultores',
     name: 'Lpharma',
     image: {
-      urlBig: '/lpharma.png',
-      url: '/lpharma-sq.png',
+      url: '/lpharma.png',
       alt: 'Lpharma Consultores logo next to a bottle of tablets.',
     },
     company: 'Freelance',
@@ -174,14 +169,15 @@ export const works: Work[] = [
     slug: 'ugd',
     name: 'Un gran dia',
     image: {
-      urlBig: '/ugd.png',
-      url: '/ugd-sq.png',
+      url: '/ugd.png',
       alt: 'Image of UGD app opening',
     },
     company: 'The Sandbox',
     info: 'UGD (Un Gran Día) is an app created to support smokers on their journey to quit smoking. It was developed in collaboration with the Argentine Association of Respiratory Medicine (AAMR).',
     role: "I was part of the application's development from the beginning to its first release on the app stores.",
     stack: ['Html', 'Css', 'Javascript', 'Ionic', 'Angular'],
-    links: ['https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749'],
+    links: [
+      'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
+    ],
   },
 ];

@@ -1,124 +1,95 @@
-import { useLayoutEffect, useState, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import Grid from '@/components/Grid/Grid';
-
-import { Work } from '@/types';
 import { works } from '@/data';
-import { animateDetail } from './animations';
+import { Work } from '@/types';
 
-const WorkDescription = ({ selectedWork }: { selectedWork: Work }) => {
-  const timeline = useRef(gsap.timeline());
-  const containerRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
+gsap.registerPlugin(ScrollTrigger);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      animateDetail(titleRef, imgRef);
-    }, [containerRef]);
+type WorkDescriptionProps = {
+  index: number;
+  work: Work;
+};
 
-    return () => ctx.revert();
-  }, [selectedWork]);
-
+const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
   return (
-    <>
-      {selectedWork && (
-        <Grid extraClasses="relative col-span-full" forwardedRef={containerRef}>
-          <div className="relative col-span-full pt-20 right-0 md:pt-0 md:col-start-3 lg:mt-20">
-            {/* Title */}
-            <h4
-              className="opacity-0 col-start-2 col-span-full z-20 text-6xl md:-mt-20 md:-ml-20 md:top-2/4 md:absolute lg:text-7xl"
-              ref={titleRef}
-            >
-              {selectedWork.name}
+    <section
+      className="min-h-screen md:opacity-0"
+      data-work-container
+    >
+      <div className="container flex flex-col justify-end md:flex-row">
+        <div className="h-full flex flex-col justify-end py-8 md:container md:absolute md:left-1/2 md:translate-x-[-50%] md:py-20">
+          {/* Image */}
+          <Image
+            className="rounded-lg mb-6 md:mb-20"
+            src={work.image.url}
+            alt={work.image.alt}
+            width={710}
+            height={400}
+            priority
+          />
+          <div className="bottom-1/4 flex flex-col gap-4">
+            {/* Name */}
+            <h4 className="text-4xl md:text-6xl">
+              {work.name}
             </h4>
-            {/* Background */}
-            <div className="relative opacity-0" ref={imgRef}>
-              <Image
-                src={selectedWork.image.urlBig}
-                alt={selectedWork.image.alt}
-                width={1028}
-                height={580}
-                className="rounded-2xl"
-                priority={true}
-              />
-
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/30"></div>
+            <div className="w-full">
+              <div className="bg-white h-px origin-left"></div>
             </div>
           </div>
+        </div>
 
-          <WorkDetail selectedWork={selectedWork} />
-        </Grid>
-      )}
-    </>
-  );
-};
+        {/* Board */}
+        <div className="bg-ultrablack/80 rounded-lg p-6 h-fit flex flex-col gap-x-4 gap-y-6 z-20 md:flex-row md:mt-48 md:auto-cols-min">
+          {/* Info */}
+          <div className="max-w-[250px] flex flex-col gap-4">
+            <h5 className="text-2xl font-medium">Info</h5>
+            <h6>Company: {work.company}</h6>
+            <p>{work.info}</p>
+          </div>
 
-const WorkDetail = ({ selectedWork }: { selectedWork: Work }) => {
-  const { info, company, role, stack, links } = selectedWork;
+          {/* Role */}
+          <div className="max-w-[210px] flex flex-col gap-4">
+            <h5 className="text-2xl font-medium">Role</h5>
+            <p>{work.role}</p>
+          </div>
 
-  return (
-    <div
-      className={`opacity-0 bg-white/5 rounded-2xl h-fit col-span-full z-40 py-8 p-6 gap-12 grid grid-cols-1 relative md:rounded-none md:-top-20 md:mt-0 md:bg-black/80 md:gap-6 md:p-8 ${
-        links
-          ? 'sm:grid-cols-3 xl:grid-cols-4'
-          : 'sm:grid-cols-3 xl:grid-cols-3'
-      }`}
-      id="workDetail"
-    >
-      <WorkDetailCol title="Info" content={info} company={company} />
+          {/* Stack */}
+          <div className="max-w-[210px] flex flex-col w-fit gap-4">
+            <h5 className="text-2xl font-medium">Stack</h5>
+            <ul className="list-disc pl-3">
+              {work.stack.map((tec) => (
+                <li key={tec}>{tec}</li>
+              ))}
+            </ul>
+          </div>
 
-      <WorkDetailCol title="Role" content={role} />
-
-      <WorkDetailCol title="Stack" content={stack} />
-
-      {links && <WorkDetailCol title="Links" content={links} />}
-    </div>
-  );
-};
-
-const WorkDetailCol = ({
-  title,
-  content,
-  company,
-}: {
-  title: string;
-  content: string | string[];
-  company?: string;
-}) => {
-  const createUl = (content: string[]) => {
-    return (
-      <ul className={`${title == 'Stack' && 'list-disc ml-6'}`} data-desc-ul>
-        {title !== 'Links'
-          ? content?.map((item) => <li key={item}>{item}</li>)
-          : content?.map((item) => (
-              <li key={item}>
-                <Link
-                  href={item}
-                  target="_blank"
-                  className="hover:text-darkgrey"
-                  data-hover
-                >
-                  {item}
+          {/* Links */}
+          {work.links && (
+            <div className="flex flex-col gap-4">
+              <h5 className="text-2xl font-medium">
+                {work.links.length > 1 ? 'Links' : 'Link'}
+              </h5>
+              {work.links.map((link) => (
+                <Link href={link} key={link} target="_blank">
+                  <Image
+                    src={'/link.svg'}
+                    alt="Link Icon"
+                    priority
+                    width={24}
+                    height={25}
+                  />
                 </Link>
-              </li>
-            ))}
-      </ul>
-    );
-    //
-  };
-
-  return (
-    <div className="work-desc-col flex flex-col gap-5 text-white">
-      <h5 className="text-4xl font-medium">{title}</h5>
-      {company && <h6>Company: {company}</h6>}
-      <div className="text-grey">
-        {Array.isArray(content) ? createUl(content) : content}
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

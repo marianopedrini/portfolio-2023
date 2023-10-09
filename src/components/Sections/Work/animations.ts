@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { works } from '@/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,70 +21,35 @@ export const animateTitle = (titleRef: any) => {
   return tl;
 };
 
-export const animateTabs = () => {
-  const tl = gsap.timeline();
+export const animateWorksOnScroll = () => {
+    let mm = gsap.matchMedia()
+  const containers = gsap.utils.toArray<HTMLElement>('[data-work-container]');
 
-  gsap.fromTo(
-    '#workTabs',
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-      duration: 1,
-      ease: 'power1.out',
-      scrollTrigger: {
-        trigger: '#workTabs',
-        start: 'top 80%',
-      },
-    }
-  );
-
-  return tl;
-};
-
-export const animateDetail = (titleRef: any, imgRef: any) => {
-  const tl = gsap.timeline();
-  const mm = gsap.matchMedia();
-
-  gsap.set(imgRef.current, { scale: 0.98 });
-  gsap.set(titleRef.current, { y: 60 });
-
-  tl.to(imgRef.current, {
-    opacity: 1,
-    scale: 1,
-    duration: 1,
-  }).to(
-    titleRef.current,
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: 'back.out(1)',
-    },
-    '<'
-  ).to(
-    '#workDetail',
-    {
-      opacity: 1,
-      duration: 1,
-      ease: 'back.out(1)',
-    },
-    '<'
-  );
-
-  mm.add('(min-width: 800px)', () => {
-    tl.to(
-      '#workDetail',
-      {
-        opacity: 1,
-        y: -150,
-        duration: 1,
-        ease: 'back.out(1)',
-      },
-      '<'
-    );
-  });
-
-  return tl;
+  mm.add("(min-width: 768px)", () => {
+      containers.forEach((container, index) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+            // markers: true,
+          },
+        });
+        if (index === 0) {
+            gsap.set(container, {
+                autoAlpha: 1,
+            })
+        }
+        tl.to(container, {
+          autoAlpha: 1,
+        }).to(
+          container,
+          {
+            autoAlpha: 0,
+          },
+          2
+        );
+      });
+  })
 };

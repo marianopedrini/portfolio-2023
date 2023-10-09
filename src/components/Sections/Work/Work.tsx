@@ -3,20 +3,17 @@ import { gsap } from 'gsap';
 
 import Title from '@/components/Title/Title';
 import Section from '@/components/Section/Section';
-import WorkWrapper from './WorkWrapper';
+import WorksContainer from '@/components/Sections/Work/WorksContainer';
 
-import { animateTitle, animateTabs } from './animations';
+import { animateTitle } from './animations';
 
 const Work = () => {
   const workContainerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const timeline = useRef(gsap.timeline());
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = timeline.current;
-      
-      tl.add(animateTitle(titleRef)).add(animateTabs());
+      animateTitle(titleRef);
     });
 
     return () => ctx.revert();
@@ -33,7 +30,7 @@ const Work = () => {
         />
       </div>
 
-      <WorkWrapper />
+      <WorksContainer />
     </Section>
   );
 };
