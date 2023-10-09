@@ -49,7 +49,7 @@ const Profession = () => {
             id="carreerTitle"
           />
 
-          <ul className="mt-16 flex flex-col gap-10">
+          <ul className="mt-16 flex flex-col gap-16">
             {carreerItems.map((item, index) => (
               <CarreerItem item={item} key={index} />
             ))}
