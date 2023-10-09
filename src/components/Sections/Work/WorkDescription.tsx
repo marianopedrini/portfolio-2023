@@ -24,14 +24,17 @@ const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
       <div className="container flex flex-col justify-end md:flex-row">
         <div className="h-full flex flex-col justify-end py-8 md:container md:absolute md:left-1/2 md:translate-x-[-50%] md:py-20">
           {/* Image */}
-          <Image
-            className="rounded-lg mb-6 md:mb-20"
-            src={work.image.url}
-            alt={work.image.alt}
-            width={710}
-            height={400}
-            priority
-          />
+          <div className='w-full max-w-[710px] max-h-[400px] overflow-hidden rounded-lg mb-6 md:mb-20'>
+            <Image
+                className='object-cover'
+                src={work.image.url}
+                alt={work.image.alt}
+                width={710}
+                height={400}
+                priority
+                data-work-image
+            />
+          </div>
           <div className="bottom-1/4 flex flex-col gap-4">
             {/* Name */}
             <h4 className="text-4xl md:text-6xl">
