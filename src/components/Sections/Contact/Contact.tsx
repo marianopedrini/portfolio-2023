@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 
-import Section from "@/components/Section/Section"
 import Title from "@/components/Title/Title"
 
 import { contactLinks } from "@/data";
@@ -21,7 +20,7 @@ const Contact = () => {
     }, [])
 
   return (
-    <Section extraClasses="h-[100dvh] md:py-0" id="contact" forwardedRef={contactSectionRef}>
+    <section className="relative z-30 h-[99dvh] md:h-[90dvh] pt-20 md:pt-28" id="contact" ref={contactSectionRef}>
       <div className="container bg-white flex flex-col pt-20 rounded-t-2xl h-full" ref={contactCardRef}>
         <Title
           title={'Contact'}
@@ -50,9 +49,9 @@ const Contact = () => {
             </ul>
           </nav>
         </div>
-        <h6 className="text-black font-semibold text-center mt-auto mb-12">Made by Mariano Pedrini</h6>
+        <h6 className="text-black font-semibold text-center mt-auto mb-6">Made by Mariano Pedrini</h6>
       </div>
-    </Section>
+    </section>
   );
 }
 

@@ -9,9 +9,9 @@ type SectionProps = {
 const Section = ({ children, extraClasses, id, forwardedRef, heightFit }: SectionProps) => {
   return (
     <section
-      className={`w-full py-20 md:py-32 ${!heightFit? 'min-h-[100dvh]' : ''} ${
+      className={`${
         extraClasses ? extraClasses : ''
-      }`}
+      } w-full py-20 md:py-32 ${!heightFit? 'min-h-[100dvh]' : ''}`}
       id={id}
       ref={forwardedRef}
     >
