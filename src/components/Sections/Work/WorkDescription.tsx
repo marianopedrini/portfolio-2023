@@ -24,7 +24,7 @@ const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
       <div className="container flex flex-col justify-end md:flex-row">
         <div className="h-full flex flex-col justify-end py-8 md:container md:absolute md:left-1/2 md:translate-x-[-50%] md:py-20">
           {/* Image */}
-          <div className='w-full max-w-[710px] max-h-[400px] overflow-hidden rounded-lg mb-6 md:mb-20'>
+          <div className='w-full mt-12 max-w-[710px] max-h-[400px] overflow-hidden rounded-lg mb-6 md:mb-20 md:mt-0'>
             <Image
                 className='object-cover'
                 src={work.image.url}
@@ -47,7 +47,7 @@ const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
         </div>
 
         {/* Board */}
-        <div className="bg-ultrablack/80 rounded-lg p-8 h-fit flex flex-col gap-x-12 gap-y-6 z-20 md:flex-row md:absolute md:top-[30vh] md:left-[40vw]">
+        <div className="bg-ultrablack/80 rounded-lg p-8 h-fit flex flex-col gap-x-12 gap-y-6 z-20 md:left-[20vw] md:flex-row md:absolute md:mr-6 md:top-[30vh] lg:left-[40vw]">
           {/* Info */}
           <div className="md:max-w-[250px] flex flex-col gap-4">
             <h5 className="text-2xl font-medium">Info</h5>

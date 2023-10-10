@@ -1,6 +1,5 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { works } from '@/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
