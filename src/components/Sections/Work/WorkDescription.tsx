@@ -41,7 +41,8 @@ const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
               {work.name}
             </h4>
             <div className="w-full">
-              <div className="bg-white h-px origin-left"></div>
+              <div className="bg-darkgrey h-px origin-left"></div>
+              <div className="bg-white h-px origin-left" data-progress-bar></div>
             </div>
           </div>
         </div>

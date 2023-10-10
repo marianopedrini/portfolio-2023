@@ -49,17 +49,37 @@ export const animateWorksOnScroll = () => {
         },
         2
       );
-
-      gsap.fromTo(img, {
-        scale: 1.1
-      },{
-        scale: 1.0,
-        scrollTrigger: {
-          trigger: container,
-          start: 'top top',
-          scrub: true,
+      gsap.fromTo(
+        '[data-progress-bar]',
+        {
+          scaleX: 0,
         },
-      });
+        {
+          scaleX: 1,
+          scrollTrigger: {
+            trigger: container,
+            start: 'top top',
+            end: 'bottom 20%',
+            scrub: true,
+            // markers: true,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        img,
+        {
+          scale: 1.1,
+        },
+        {
+          scale: 1.0,
+          scrollTrigger: {
+            trigger: container,
+            start: 'top top',
+            scrub: true,
+          },
+        }
+      );
     });
   });
 };
