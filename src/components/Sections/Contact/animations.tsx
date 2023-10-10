@@ -8,7 +8,6 @@ export const animateContact = (contactSectionRef: any, titleRef: any) => {
     scrollTrigger: {
       trigger: contactSectionRef.current,
       start: 'top center',
-      markers: true,
     },
   });
   const subtitles = gsap.utils.toArray('[data-contact-subtitle]');
