@@ -47,22 +47,22 @@ const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
         </div>
 
         {/* Board */}
-        <div className="bg-ultrablack/80 rounded-lg p-6 h-fit flex flex-col gap-x-4 gap-y-6 z-20 md:flex-row md:mt-48 md:auto-cols-min">
+        <div className="bg-ultrablack/80 rounded-lg p-8 h-fit flex flex-col gap-x-12 gap-y-6 z-20 md:flex-row md:absolute md:top-[30vh] md:left-[40vw]">
           {/* Info */}
-          <div className="max-w-[250px] flex flex-col gap-4">
+          <div className="md:max-w-[250px] flex flex-col gap-4">
             <h5 className="text-2xl font-medium">Info</h5>
             <h6>Company: {work.company}</h6>
             <p>{work.info}</p>
           </div>
 
           {/* Role */}
-          <div className="max-w-[210px] flex flex-col gap-4">
+          <div className="md:max-w-[210px] flex flex-col gap-4">
             <h5 className="text-2xl font-medium">Role</h5>
             <p>{work.role}</p>
           </div>
 
           {/* Stack */}
-          <div className="max-w-[210px] flex flex-col w-fit gap-4">
+          <div className="md:max-w-[210px] flex flex-col w-fit gap-4">
             <h5 className="text-2xl font-medium">Stack</h5>
             <ul className="list-disc pl-3">
               {work.stack.map((tec) => (
