@@ -40,11 +40,11 @@ export const contactLinks: DefaultLink[] = [
     text: 'https://github.com/marianopedrini',
     appName: 'Github',
   },
-  {
-    link: 'https://twitter.com/marianpedrini',
-    text: 'https://twitter.com/marianpedrini',
-    appName: 'X',
-  },
+//   {
+//     link: 'https://twitter.com/marianpedrini',
+//     text: 'https://twitter.com/marianpedrini',
+//     appName: 'X',
+//   },
 ];
 
 export const carreerItems: CarreerExperience[] = [
@@ -112,6 +112,7 @@ export const skills: Skills = {
     items: ['Typescript', 'Django', 'Express', 'SQL'],
   },
 };
+
 export const works: Work[] = [
   {
     id: 1,
