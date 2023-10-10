@@ -40,11 +40,11 @@ export const contactLinks: DefaultLink[] = [
     text: 'https://github.com/marianopedrini',
     appName: 'Github',
   },
-//   {
-//     link: 'https://twitter.com/marianpedrini',
-//     text: 'https://twitter.com/marianpedrini',
-//     appName: 'X',
-//   },
+  //   {
+  //     link: 'https://twitter.com/marianpedrini',
+  //     text: 'https://twitter.com/marianpedrini',
+  //     appName: 'X',
+  //   },
 ];
 
 export const carreerItems: CarreerExperience[] = [
@@ -183,6 +183,22 @@ export const works: Work[] = [
     stack: ['Html', 'Css', 'Javascript', 'Ionic', 'Angular'],
     links: [
       'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
+    ],
+  },
+  {
+    id: 6,
+    slug: 'old-portfolio',
+    name: 'Old Portfolio',
+    image: {
+      url: '/old-portfolio.png',
+      alt: 'Image of the index page of my old portfolio',
+    },
+    company: 'Personal Project',
+    info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
+    role: "I designed and developed it entirely.",
+    stack: ['Html', 'Css', 'Javascript', 'React', 'Sass'],
+    links: [
+      'https://pedrinimariano.netlify.app/',
     ],
   },
 ];
