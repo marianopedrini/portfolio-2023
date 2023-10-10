@@ -25,7 +25,7 @@ const Loader = ({ timeline }: any) => {
   }, [timeline]);
 
   return (
-    <section className="h-screen flex items-center justify-center relative">
+    <section className="h-[100dvh] flex items-center justify-center relative">
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <div
           className="flex text-3xl md:text-7xl"
