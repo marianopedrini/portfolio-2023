@@ -34,7 +34,6 @@ export const animateWorksOnScroll = () => {
           pin: true,
           pinSpacing: false,
           scrub: true,
-          // markers: true,
         },
       });
       if (index === 0) {
@@ -60,7 +59,6 @@ export const animateWorksOnScroll = () => {
           trigger: container,
           start: 'top top',
           scrub: true,
-          markers: true,
         },
       });
     });
