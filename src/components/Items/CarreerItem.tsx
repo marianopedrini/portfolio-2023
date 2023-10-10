@@ -15,7 +15,7 @@ const CarreerItem = ({ item }: CarreerItemProps) => {
       <p className="text-xl w-14 text-center md:text-2xl">{item.period}</p>
       <div className="ml-4 flex-1 flex flex-col gap-6 border-l border-l-white pl-4 md:text-xl">
         {item.companies.map((company) => (
-            <CompanyItem company={company} key={company.id}/>
+          <CompanyItem company={company} key={company.id} />
         ))}
       </div>
     </li>
@@ -23,23 +23,31 @@ const CarreerItem = ({ item }: CarreerItemProps) => {
 };
 
 const CompanyItem = ({ company }: CompanyItemProps) => {
-    const returnTitle = () => {
-        if (company.link) {
-            return (
-                <Link href={company.link} target="_blank" className="font-medium text-grey block mb-1 w-fit" data-hover>
-                    {company.name}
-                </Link>
-            );
-        }
-        return <h6 className="font-medium text-grey mb-2">{company.name}</h6>;
+  const returnTitle = () => {
+    if (company.link) {
+      return (
+        <p className="font-medium text-grey block mb-1 w-fit">
+          <Link
+            href={company.link}
+            target="_blank"
+            className="relative custom-underline"
+            data-hover
+          >
+            {company.name}
+          </Link>
+          {company.job && ` - ${company.job}`}
+        </p>
+      );
     }
-
-    return (
-      <div>
-        {company.name && returnTitle()}
-        <p className='leading-9'>{company.description}</p>
-      </div>
-    );
+    return <h6 className="font-medium text-grey mb-2">{company.name}</h6>;
   };
+
+  return (
+    <div>
+      {company.name && returnTitle()}
+      <p className="leading-9">{company.description}</p>
+    </div>
+  );
+};
 
 export default CarreerItem;

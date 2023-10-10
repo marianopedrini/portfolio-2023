@@ -65,7 +65,8 @@ export const carreerItems: CarreerExperience[] = [
       {
         id: 2,
         link: 'https://www.thesandbox.com.ar/',
-        name: 'The Sandbox - Fullstack Developer',
+        name: 'The Sandbox',
+        job: 'Fullstack Developer',
         description:
           'I worked with technolgies like HTML, CSS, Javascript, Php + Laravel, Ionic and Vue. ',
       },
@@ -82,7 +83,8 @@ export const carreerItems: CarreerExperience[] = [
       {
         id: 4,
         link: 'https://egodesign.io/',
-        name: 'Ego Agency - Software Developer.',
+        name: 'Ego Agency',
+        job: 'Software Developer',
         description:
           'I’m currently working at Agencia Ego, creating experiences for important international brands recognized worldwide. I work with HTML, CSS, Javascript, React and Python (Django).',
       },

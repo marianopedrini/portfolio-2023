@@ -8,6 +8,7 @@ export interface Company {
     id: number;
     link?: string,
     name?: string;
+    job?: string,
     description: string;
 }
 
