@@ -26,7 +26,7 @@ export const animateContact = (contactSectionRef: any, titleRef: any) => {
     y: 0,
     opacity: 1,
     stagger: 0.1,
-  });
+  }, '<');
 
   return tl;
 };
