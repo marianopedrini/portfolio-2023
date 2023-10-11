@@ -43,9 +43,9 @@ export default function Home() {
   return (
     <main>
       {/* <Cursor /> */}
-      {isLoading && isHome ? (
+      {/* {isLoading && isHome ? (
         <SplashScreen timeline={timeline} />
-      ) : (
+      ) : ( */}
         <>
           <Header />
           <Hero />
@@ -54,7 +54,7 @@ export default function Home() {
           <Work />
           <Contact />
         </>
-      )}
+      {/* )} */}
     </main>
   );
 }

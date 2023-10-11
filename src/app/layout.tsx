@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Mariano Pedrini',
-  description: 'Mariano Pedrini is a frontend developer from Argentina.',
+  description: 'Mariano Pedrini is a frontend developer from Argentina with focus on JavaScript.',
 }
 
 const avenir_next = localFont({
