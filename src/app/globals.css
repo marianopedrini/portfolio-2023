@@ -85,13 +85,11 @@ body {
 }
 
 [data-404-btn] span {
-    margin-right: 0px;
     transition: width .5s ease-in-out; 
 }
 
 [data-404-btn]:hover span {
     width: 28px;
-    margin-right: 4px;
     max-width: fit-content;
     transition: width .5s ease-in-out; 
 }
