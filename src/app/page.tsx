@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useLayoutEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { gsap } from 'gsap';
 
-import Loader from '@/components/Loader/Loader';
+import SplashScreen from '@/components/SplashScreen/SplashScreen';
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Sections/Hero/Hero';
 import About from '@/components/Sections/About/About';
@@ -11,10 +12,11 @@ import Work from '@/components/Sections/Work/Work';
 import Contact from '@/components/Sections/Contact/Contact';
 import Cursor from '@/components/Cursor/Cursor';
 
-import { useGsapContext } from '@/hooks/useGsapContext';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
   const [timeline, setTimeline] = useState<any>(null);
 
   useLayoutEffect(() => {
@@ -41,8 +43,8 @@ export default function Home() {
   return (
     <main>
       {/* <Cursor /> */}
-      {isLoading ? (
-        <Loader timeline={timeline} />
+      {isLoading && isHome ? (
+        <SplashScreen timeline={timeline} />
       ) : (
         <>
           <Header />
@@ -53,13 +55,6 @@ export default function Home() {
           <Contact />
         </>
       )}
-
-      {/* <Header />
-      <Hero />
-      <About />
-      <Profession />
-      <Work />
-      <Contact /> */}
     </main>
   );
 }

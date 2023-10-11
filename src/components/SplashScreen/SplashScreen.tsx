@@ -7,7 +7,7 @@ import {
   finishAnimation,
 } from './animations';
 
-const Loader = ({ timeline }: any) => {
+const SplashScreen = ({ timeline }: any) => {
   const mainTextRef = useRef<HTMLDivElement>(null);
   const frontendWordRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
@@ -66,4 +66,4 @@ const Loader = ({ timeline }: any) => {
     </section>
   );
 };
-export default Loader;
+export default SplashScreen;
