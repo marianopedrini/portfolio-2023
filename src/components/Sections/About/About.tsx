@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <Section heightFit={true} id="about">
+    <Section extraClasses='flex items-center' id="about">
       <Grid extraClasses="container h-full">
         <div
           className="flex flex-col gap-14 lg:col-start-2 lg:col-end-12"

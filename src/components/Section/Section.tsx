@@ -3,15 +3,14 @@ type SectionProps = {
   extraClasses?: string
   id?: string
   forwardedRef?: React.RefObject<HTMLElement>
-  heightFit?: boolean
 };
 
-const Section = ({ children, extraClasses, id, forwardedRef, heightFit }: SectionProps) => {
+const Section = ({ children, extraClasses, id, forwardedRef }: SectionProps) => {
   return (
     <section
       className={`${
         extraClasses ? extraClasses : ''
-      } w-full py-20 md:py-32 ${!heightFit? 'min-h-[100dvh]' : ''}`}
+      } w-full py-20 md:py-32 min-h-[100dvh]`}
       id={id}
       ref={forwardedRef}
     >
