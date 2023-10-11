@@ -196,7 +196,7 @@ export const works: Work[] = [
     company: 'Personal Project',
     info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
     role: "I designed and developed it entirely.",
-    stack: ['Html', 'Css', 'Javascript', 'React', 'Sass'],
+    stack: ['Html', 'Css', 'Javascript', 'React'],
     links: [
       'https://pedrinimariano.netlify.app/',
     ],
