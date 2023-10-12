@@ -12,7 +12,6 @@ import Work from '@/components/Sections/Work/Work';
 import Contact from '@/components/Sections/Contact/Contact';
 import Cursor from '@/components/Cursor/Cursor';
 
-
 export default function Home() {
   const pathname = usePathname();
   const isHome = pathname === '/';
@@ -43,9 +42,9 @@ export default function Home() {
   return (
     <main>
       {/* <Cursor /> */}
-      {/* {isLoading && isHome ? (
+      {isLoading && isHome ? (
         <SplashScreen timeline={timeline} />
-      ) : ( */}
+      ) : (
         <>
           <Header />
           <Hero />
@@ -54,7 +53,7 @@ export default function Home() {
           <Work />
           <Contact />
         </>
-      {/* )} */}
+      )}
     </main>
   );
 }
