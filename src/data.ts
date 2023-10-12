@@ -1,4 +1,4 @@
-import { DefaultLink, Company, CarreerExperience, Skills, Work } from '@/types';
+import { DefaultLink, Company, CareerExperience, Skills, Work } from '@/types';
 
 export const mainPhrase: string =
   "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
@@ -15,8 +15,8 @@ export const menuLinks: DefaultLink[] = [
     link: '/#about',
   },
   {
-    text: 'Carreer',
-    link: '/#carreer',
+    text: 'Career',
+    link: '/#career',
   },
   {
     text: 'Work',
@@ -47,7 +47,7 @@ export const contactLinks: DefaultLink[] = [
   //   },
 ];
 
-export const carreerItems: CarreerExperience[] = [
+export const careerItems: CareerExperience[] = [
   {
     period: '2020',
     companies: [

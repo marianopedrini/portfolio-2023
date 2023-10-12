@@ -3,17 +3,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const animateCarreer = (
+export const animateCareer = (
   sectionRef: any,
-  carreerTitleRef: any,
-  splittedCarreer: any
+  careerTitleRef: any,
+  splittedCareer: any
 ) => {
   const tl = gsap.timeline({});
-  const carreerItems = gsap.utils.toArray<HTMLElement>('[data-carreer-item]');
-  gsap.set(carreerTitleRef.current, { opacity: 1 });
+  const careerItems = gsap.utils.toArray<HTMLElement>('[data-career-item]');
+  gsap.set(careerTitleRef.current, { opacity: 1 });
 
   gsap.fromTo(
-    splittedCarreer.chars,
+    splittedCareer.chars,
     {
       x: 20,
       opacity: 0,
@@ -30,7 +30,7 @@ export const animateCarreer = (
     }
   );
 
-  carreerItems.forEach((item) => {
+  careerItems.forEach((item) => {
     gsap.fromTo(
       item,
       {

@@ -4,23 +4,23 @@ import SplitType from 'split-type';
 
 import Section from '@/components/Section/Section';
 import Title from '@/components/Title/Title';
-import CarreerItem from '@/components/Items/CarreerItem';
+import CareerItem from '@/components/Items/CareerItem';
 import SkillsList from '@/components/Items/SkillItem';
 
-import { carreerItems, skills } from '@/data';
+import { careerItems, skills } from '@/data';
 
-import { animateCarreer, animateSkills } from './animations';
+import { animateCareer, animateSkills } from './animations';
 
 const { main: mainSkills, other: otherSkills } = skills;
 
 const Profession = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const carreerTitleRef = useRef<HTMLHeadingElement>(null);
+  const careerTitleRef = useRef<HTMLHeadingElement>(null);
   const skillsTitleRef = useRef<HTMLHeadingElement>(null);
   const timeline = useRef(gsap.timeline());
 
   useLayoutEffect(() => {
-    const splittedCarreer = new SplitType('#carreerTitle', {
+    const splittedCareer = new SplitType('#careerTitle', {
       types: 'chars',
     });
     const splittedSkills = new SplitType('#skillsTitle', {
@@ -28,7 +28,7 @@ const Profession = () => {
     });
 
     const ctx = gsap.context(() => {
-        animateCarreer(sectionRef, carreerTitleRef, splittedCarreer)
+        animateCareer(sectionRef, careerTitleRef, splittedCareer)
         animateSkills(sectionRef, skillsTitleRef, splittedSkills)
     });
 
@@ -36,22 +36,22 @@ const Profession = () => {
   }, []);
 
   return (
-    <Section id="carreer" extraClasses="min-w-full" forwardedRef={sectionRef}>
+    <Section id="career" extraClasses="min-w-full" forwardedRef={sectionRef}>
       <div className="container flex flex-col md:flex-row md:gap-x-12 lg:gap-x-20">
         
-        {/* Carreer container */}
+        {/* Career container */}
         <div className="md:w-7/12">
           <Title
-            title={'Carreer'}
+            title={'Career'}
             color={'white'}
             extraClasses="opacity-0"
-            forwardedRef={carreerTitleRef}
-            id="carreerTitle"
+            forwardedRef={careerTitleRef}
+            id="careerTitle"
           />
 
           <ul className="mt-16 flex flex-col gap-16">
-            {carreerItems.map((item, index) => (
-              <CarreerItem item={item} key={index} />
+            {careerItems.map((item, index) => (
+              <CareerItem item={item} key={index} />
             ))}
           </ul>
         </div>

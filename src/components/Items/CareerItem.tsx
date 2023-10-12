@@ -1,17 +1,17 @@
 import Link from 'next/link';
-import { CarreerExperience, Company } from '@/types';
+import { CareerExperience, Company } from '@/types';
 
-type CarreerItemProps = {
-  item: CarreerExperience;
+type CareerItemProps = {
+  item: CareerExperience;
 };
 
 type CompanyItemProps = {
   company: Company;
 };
 
-const CarreerItem = ({ item }: CarreerItemProps) => {
+const CareerItem = ({ item }: CareerItemProps) => {
   return (
-    <li className="opacity-0 flex items-center" data-carreer-item>
+    <li className="opacity-0 flex items-center" data-career-item>
       <p className="text-xl w-14 text-center md:text-2xl">{item.period}</p>
       <div className="ml-4 flex-1 flex flex-col gap-6 border-l border-l-white pl-4 md:text-xl">
         {item.companies.map((company) => (
@@ -50,4 +50,4 @@ const CompanyItem = ({ company }: CompanyItemProps) => {
   );
 };
 
-export default CarreerItem;
+export default CareerItem;
