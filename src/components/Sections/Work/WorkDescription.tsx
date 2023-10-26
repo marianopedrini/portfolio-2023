@@ -17,7 +17,7 @@ type WorkDescriptionProps = {
 
 const WorkDescription = ({ index, work }: WorkDescriptionProps) => {
   const { image, name, company, info, role, stack, links } = work;
-    console.log(image)
+
   return (
     <section className="min-h-screen md:opacity-0" data-work-container>
       <div className="container flex flex-col justify-end md:flex-row">
