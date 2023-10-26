@@ -119,7 +119,7 @@ export const works: Work[] = [
     slug: 'calsa',
     name: 'Calsa',
     image: {
-      url: '/calsa.png',
+      url: '/images/calsa.png',
       alt: 'Image of a woman making bread',
     },
     company: 'The Sandbox',
@@ -133,8 +133,8 @@ export const works: Work[] = [
     slug: 'studio-ghibli',
     name: 'Studio Ghibli',
     image: {
-      url: '/ghibli.png',
-      alt: 'Image of a woman making bread',
+      url: '/images/ghibli.png',
+      alt: 'Image of Ghibly studio',
     },
     company: 'Personal Project',
     info: 'Own project created to reinforce concepts such as API integration, handling favorites (stored in LocalStorage), basic animations, and error or empty state management.',
@@ -147,7 +147,7 @@ export const works: Work[] = [
     slug: 'salud-digestiva',
     name: 'Salud Digestiva',
     image: {
-      url: '/salud.png',
+      url: '/images/salud.png',
       alt: 'Image of macbook pro with the site as background',
     },
     company: 'The Sandbox',
@@ -160,7 +160,7 @@ export const works: Work[] = [
     slug: 'lpharma-consultores',
     name: 'Lpharma',
     image: {
-      url: '/lpharma.png',
+      url: '/images/lpharma.png',
       alt: 'Lpharma Consultores logo next to a bottle of tablets.',
     },
     company: 'Freelance',
@@ -174,7 +174,7 @@ export const works: Work[] = [
     slug: 'ugd',
     name: 'Un gran dia',
     image: {
-      url: '/ugd.png',
+      url: '/images/ugd.png',
       alt: 'Image of UGD app opening',
     },
     company: 'The Sandbox',
@@ -190,7 +190,7 @@ export const works: Work[] = [
     slug: 'old-portfolio',
     name: 'Old Portfolio',
     image: {
-      url: '/old-portfolio.png',
+      url: '/images/old-portfolio.png',
       alt: 'Image of the index page of my old portfolio',
     },
     company: 'Personal Project',
