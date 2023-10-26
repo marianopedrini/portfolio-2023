@@ -61,7 +61,7 @@ const Header = () => {
           />
 
           <Link
-            href={'/'}
+            href={'/#hero'}
             onClick={() => setIsMenuActive(false)}
             data-hover
             className="hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:inline-block"
