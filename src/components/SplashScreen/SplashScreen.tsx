@@ -21,7 +21,7 @@ const SplashScreen = ({ timeline }: any) => {
         .add(mainTextAnimation(frontendWordRef, developerWordRef, lineRef))
         .add(nameAnimation(nameRef))
         .add(progressAnimation(counterRef), '0')
-        .add(finishAnimation(mainTextRef, nameRef, counterRef), '-=1');
+        .add(finishAnimation(mainTextRef, nameRef, counterRef), '-=1.5');
   }, [timeline]);
 
   return (
