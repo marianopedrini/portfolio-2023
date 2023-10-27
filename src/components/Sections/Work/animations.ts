@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { works } from '@/data';
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const animateTitle = (titleRef: any) => {
@@ -26,6 +28,8 @@ export const animateWorksOnScroll = () => {
 
   mm.add('(min-width: 768px)', () => {
     containers.forEach((container, index) => {
+      const isLastItem = index === works.length - 1;
+      console.log(isLastItem);
       const img = container.querySelector('[data-work-image]');
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -42,13 +46,25 @@ export const animateWorksOnScroll = () => {
       }
       tl.to(container, {
         autoAlpha: 1,
-      }).to(
-        container,
-        {
-          autoAlpha: 0,
-        },
-        2
-      );
+      })
+      if (!isLastItem) {
+        tl.to(
+          container,
+          {
+            autoAlpha: 0,
+          },
+          2
+        );
+      } else {
+        tl.to(
+          container,
+          {
+            autoAlpha: 0.5,
+          },
+          2
+        );
+      }
+      
       gsap.fromTo(
         '[data-progress-bar]',
         {

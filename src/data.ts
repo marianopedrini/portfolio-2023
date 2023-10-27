@@ -6,7 +6,7 @@ export const mainPhrase: string =
 export const aboutTexts: string[] = [
   "I am a frontend developer from Argentina, with 3 years of experience in web development. I'm a JavaScript enthusiast, and currently, I'm learning about advanced and high-performance animations.",
   'I studied industrial design for a few years at UBA, which gave me a design background that I apply in my career today.',
-  'I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge',
+  'I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge.',
 ];
 
 export const menuLinks: DefaultLink[] = [

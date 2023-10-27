@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
     <section
-      className="relative z-30 h-[99dvh] md:h-[90dvh] pt-20 md:pt-28"
+      className="relative z-30 h-[99dvh] md:h-[90dvh] pt-20 md:pt-28 md:mt-[10vh]"
       id="contact"
       ref={contactSectionRef}
     >
