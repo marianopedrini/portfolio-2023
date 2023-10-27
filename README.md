@@ -14,4 +14,4 @@ _If you don’t have Node.js installed, [install it from here](https://nodejs.or
   npm run dev
 ```
 
-To see if it’s workin, open http://localhost:3000 from your browser.
+To see if it’s working, open http://localhost:3000 from your browser.
