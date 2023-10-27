@@ -1,14 +1,17 @@
-Breakpoints
-sm	640px	@media (min-width: 640px) { ... }
-md	768px	@media (min-width: 768px) { ... }
-lg	1024px	@media (min-width: 1024px) { ... }
-xl	1280px	@media (min-width: 1280px) { ... }
-2xl	1536px	@media (min-width: 1536px) { ... }
+# Welcome to my portfolio
 
-Fontsize
-Ultra Light - 100 - Tailwind:font-thin
-Regular - 400 - Tailwind:font-normal
-Medium - 500 - Tailwind:font-medium
-Demi - 600 - Tailwind:font-semibold
-Bold- 700 - Tailwind:font-bold
-Heavy - 900 - Tailwind:font-black
+Here you can see how I built my 2023 website and what my way of working is.  
+The technologies I used are **Next.js**, **Tailwind**, **TypeScript**, and **GSAP** for the animations.
+
+## Run project locally
+
+_If you don’t have Node.js installed, [install it from here](https://nodejs.org/en). You’ll need Node.js version 18 or higher._
+
+```bash
+  npm install
+```
+```bash
+  npm run dev
+```
+
+To see if it’s workin, open http://localhost:3000 from your browser.
