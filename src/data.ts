@@ -49,16 +49,19 @@ export const contactLinks: DefaultLink[] = [
 
 export const careerItems: CareerExperience[] = [
   {
-    period: '2020',
+    period: '2022 - now',
     companies: [
       {
-        id: 1,
-        link: 'https://www.digitalhouse.com/ar',
-        name: 'Digital House',
-        description: 'I started learning web development.',
+        id: 4,
+        link: 'https://egodesign.io/',
+        name: 'Ego Agency',
+        job: 'Software Developer',
+        description:
+          'I’m currently working at Agencia Ego, creating experiences for important international brands recognized worldwide like Toyota Chile, Kinto, Lexus, Veritran and many others. I work with HTML, CSS, Javascript, React and Python (Django).',
       },
     ],
   },
+
   {
     period: `2021 - 2022`,
     companies: [
@@ -78,15 +81,13 @@ export const careerItems: CareerExperience[] = [
     ],
   },
   {
-    period: '2022 - now',
+    period: '2020',
     companies: [
       {
-        id: 4,
-        link: 'https://egodesign.io/',
-        name: 'Ego Agency',
-        job: 'Software Developer',
-        description:
-          'I’m currently working at Agencia Ego, creating experiences for important international brands recognized worldwide. I work with HTML, CSS, Javascript, React and Python (Django).',
+        id: 1,
+        link: 'https://www.digitalhouse.com/ar',
+        name: 'Digital House',
+        description: 'I started learning web development.',
       },
     ],
   },
@@ -185,20 +186,20 @@ export const works: Work[] = [
       'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
     ],
   },
-//   {
-//     id: 6,
-//     slug: 'old-portfolio',
-//     name: 'Old Portfolio',
-//     image: {
-//       url: '/images/old-portfolio.png',
-//       alt: 'Image of the index page of my old portfolio',
-//     },
-//     company: 'Personal Project',
-//     info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
-//     role: "I designed and developed it entirely.",
-//     stack: ['Html', 'Css', 'Javascript', 'React'],
-//     links: [
-//       'https://pedrinimariano.netlify.app/',
-//     ],
-//   },
+  //   {
+  //     id: 6,
+  //     slug: 'old-portfolio',
+  //     name: 'Old Portfolio',
+  //     image: {
+  //       url: '/images/old-portfolio.png',
+  //       alt: 'Image of the index page of my old portfolio',
+  //     },
+  //     company: 'Personal Project',
+  //     info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
+  //     role: "I designed and developed it entirely.",
+  //     stack: ['Html', 'Css', 'Javascript', 'React'],
+  //     links: [
+  //       'https://pedrinimariano.netlify.app/',
+  //     ],
+  //   },
 ];

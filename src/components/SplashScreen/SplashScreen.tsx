@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef } from 'react';
 import {
   mainTextAnimation,
   nameAnimation,
-  progressAnimation,
+//   progressAnimation,
   finishAnimation,
 } from './animations';
 
@@ -20,7 +20,7 @@ const SplashScreen = ({ timeline }: any) => {
       timeline
         .add(mainTextAnimation(frontendWordRef, developerWordRef, lineRef))
         .add(nameAnimation(nameRef))
-        .add(progressAnimation(counterRef), '0')
+        // .add(progressAnimation(counterRef), '0')
         .add(finishAnimation(mainTextRef, nameRef, counterRef), '-=1.5');
   }, [timeline]);
 
