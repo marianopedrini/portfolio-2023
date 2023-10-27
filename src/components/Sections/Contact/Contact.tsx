@@ -69,7 +69,15 @@ const Contact = () => {
           </nav>
         </div>
         <h6 className="text-black font-semibold text-center mt-auto mb-6">
-          Made by Mariano Pedrini
+          Made and designed by Mariano Pedrini -{' '}
+          <Link
+            href={'https://pedrinimariano.netlify.app/'}
+            target="_blank"
+            className="text-darkgrey"
+            data-hover
+          >
+            See old version
+          </Link>
         </h6>
       </div>
     </section>

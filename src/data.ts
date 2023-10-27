@@ -109,7 +109,7 @@ export const skills: Skills = {
   },
   other: {
     title: 'Other / learning',
-    items: ['Typescript', 'Django', 'Express', 'SQL'],
+    items: ['GSAP', 'Typescript', 'Django', 'Express', 'SQL'],
   },
 };
 
@@ -185,20 +185,20 @@ export const works: Work[] = [
       'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
     ],
   },
-  {
-    id: 6,
-    slug: 'old-portfolio',
-    name: 'Old Portfolio',
-    image: {
-      url: '/images/old-portfolio.png',
-      alt: 'Image of the index page of my old portfolio',
-    },
-    company: 'Personal Project',
-    info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
-    role: "I designed and developed it entirely.",
-    stack: ['Html', 'Css', 'Javascript', 'React'],
-    links: [
-      'https://pedrinimariano.netlify.app/',
-    ],
-  },
+//   {
+//     id: 6,
+//     slug: 'old-portfolio',
+//     name: 'Old Portfolio',
+//     image: {
+//       url: '/images/old-portfolio.png',
+//       alt: 'Image of the index page of my old portfolio',
+//     },
+//     company: 'Personal Project',
+//     info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
+//     role: "I designed and developed it entirely.",
+//     stack: ['Html', 'Css', 'Javascript', 'React'],
+//     links: [
+//       'https://pedrinimariano.netlify.app/',
+//     ],
+//   },
 ];
