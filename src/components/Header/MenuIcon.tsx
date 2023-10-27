@@ -10,7 +10,6 @@ const MenuIcon = ({ onClick, isActive, forwardRef }: MenuIconProps) => {
       className="opacity-0 bg-black/90 backdrop-blur-sm w-[54px] h-[54px] rounded-full absolute top-4 cursor-pointer group"
       onClick={onClick}
       ref={forwardRef}
-      data-hover
     >
       <span
         className={`block h-[1px] w-[30px] bg-grey absolute top-[23px] left-3 transition-all duration-700 delay-150 ${

@@ -41,11 +41,11 @@ export default function Home() {
 
   return (
     <main>
-      {/* <Cursor /> */}
       {isLoading && isHome ? (
         <SplashScreen timeline={timeline} />
       ) : (
         <>
+          <Cursor />
           <Header />
           <Hero />
           <About />

@@ -49,7 +49,6 @@ const NavMenu = ({ isMenuActive, setIsMenuActive }: NavMenuProps) => {
                   <Link
                     href={navlink.link}
                     onClick={() => setIsMenuActive(false)}
-                    data-hover
                   >
                     {navlink.text}
                   </Link>
