@@ -186,20 +186,20 @@ export const works: Work[] = [
       'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
     ],
   },
-  //   {
-  //     id: 6,
-  //     slug: 'old-portfolio',
-  //     name: 'Old Portfolio',
-  //     image: {
-  //       url: '/images/old-portfolio.png',
-  //       alt: 'Image of the index page of my old portfolio',
-  //     },
-  //     company: 'Personal Project',
-  //     info: 'My previous portfolio. It was built using React and was my first encounter with basic animations.',
-  //     role: "I designed and developed it entirely.",
-  //     stack: ['Html', 'Css', 'Javascript', 'React'],
-  //     links: [
-  //       'https://pedrinimariano.netlify.app/',
-  //     ],
-  //   },
+  {
+    id: 6,
+    slug: 'avicii',
+    name: 'Avicii Fanpage',
+    image: {
+      url: '/images/avicii.png',
+      alt: 'Image of Avicii fanpage',
+    },
+    company: 'Personal Project',
+    info: 'A personal project created in memory of Avicii to hone my skills and reinforce key concepts.',
+    role: "Both the development and the simple design were carried out by me. I did the design in Figma, and I implemented the development using React and Tailwind CSS.",
+    stack: ['Html', 'Css', 'Javascript', 'React', 'Tailwind'],
+    links: [
+      'https://avicii-mp.vercel.app/',
+    ],
+  },
 ];
