@@ -29,7 +29,7 @@ export const animateWorksOnScroll = () => {
   mm.add('(min-width: 768px)', () => {
     containers.forEach((container, index) => {
       const isLastItem = index === works.length - 1;
-      console.log(isLastItem);
+
       const img = container.querySelector('[data-work-image]');
       let tl = gsap.timeline({
         scrollTrigger: {
