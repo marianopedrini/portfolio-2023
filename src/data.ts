@@ -117,6 +117,20 @@ export const skills: Skills = {
 export const works: Work[] = [
   {
     id: 1,
+    slug: 'avicii',
+    name: 'Avicii Fanpage',
+    image: {
+      url: '/images/avicii.png',
+      alt: 'Image of Avicii fanpage',
+    },
+    company: 'Personal Project',
+    info: 'A personal project created in memory of Avicii to hone my skills and reinforce key concepts.',
+    role: 'Both the development and the simple design were carried out by me. I did the design in Figma, and I implemented the development using React and Tailwind CSS.',
+    stack: ['Html', 'Css', 'Javascript', 'React', 'Tailwind'],
+    links: ['https://avicii-mp.vercel.app/'],
+  },
+  {
+    id: 2,
     slug: 'calsa',
     name: 'Calsa',
     image: {
@@ -130,7 +144,7 @@ export const works: Work[] = [
     links: ['https://www.calsa.com.ar'],
   },
   {
-    id: 2,
+    id: 3,
     slug: 'studio-ghibli',
     name: 'Studio Ghibli',
     image: {
@@ -144,7 +158,7 @@ export const works: Work[] = [
     links: ['https://studio-ghibli-mp.vercel.app/'],
   },
   {
-    id: 3,
+    id: 4,
     slug: 'salud-digestiva',
     name: 'Salud Digestiva',
     image: {
@@ -157,7 +171,7 @@ export const works: Work[] = [
     stack: ['Html', 'Css', 'Javascript', 'Laravel'],
   },
   {
-    id: 4,
+    id: 5,
     slug: 'lpharma-consultores',
     name: 'Lpharma',
     image: {
@@ -171,7 +185,7 @@ export const works: Work[] = [
     links: ['https://www.lpharmaconsultores.com/'],
   },
   {
-    id: 5,
+    id: 6,
     slug: 'ugd',
     name: 'Un gran dia',
     image: {
@@ -184,22 +198,6 @@ export const works: Work[] = [
     stack: ['Html', 'Css', 'Javascript', 'Ionic', 'Angular'],
     links: [
       'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
-    ],
-  },
-  {
-    id: 6,
-    slug: 'avicii',
-    name: 'Avicii Fanpage',
-    image: {
-      url: '/images/avicii.png',
-      alt: 'Image of Avicii fanpage',
-    },
-    company: 'Personal Project',
-    info: 'A personal project created in memory of Avicii to hone my skills and reinforce key concepts.',
-    role: "Both the development and the simple design were carried out by me. I did the design in Figma, and I implemented the development using React and Tailwind CSS.",
-    stack: ['Html', 'Css', 'Javascript', 'React', 'Tailwind'],
-    links: [
-      'https://avicii-mp.vercel.app/',
     ],
   },
 ];
