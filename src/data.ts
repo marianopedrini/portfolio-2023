@@ -184,20 +184,20 @@ export const works: Work[] = [
     stack: ['Html', 'Css', 'Javascript'],
     links: ['https://www.lpharmaconsultores.com/'],
   },
-  {
-    id: 6,
-    slug: 'ugd',
-    name: 'Un gran dia',
-    image: {
-      url: '/images/ugd.png',
-      alt: 'Image of UGD app opening',
-    },
-    company: 'The Sandbox',
-    info: 'UGD (Un Gran Día) is an app created to support smokers on their journey to quit smoking. It was developed in collaboration with the Argentine Association of Respiratory Medicine (AAMR).',
-    role: "I was part of the application's development from the beginning to its first release on the app stores.",
-    stack: ['Html', 'Css', 'Javascript', 'Ionic', 'Angular'],
-    links: [
-      'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
-    ],
-  },
+//   {
+//     id: 6,
+//     slug: 'ugd',
+//     name: 'Un gran dia',
+//     image: {
+//       url: '/images/ugd.png',
+//       alt: 'Image of UGD app opening',
+//     },
+//     company: 'The Sandbox',
+//     info: 'UGD (Un Gran Día) is an app created to support smokers on their journey to quit smoking. It was developed in collaboration with the Argentine Association of Respiratory Medicine (AAMR).',
+//     role: "I was part of the application's development from the beginning to its first release on the app stores.",
+//     stack: ['Html', 'Css', 'Javascript', 'Ionic', 'Angular'],
+//     links: [
+//       'https://apps.apple.com/no/app/un-gran-d%C3%ADa-dejar-de-fumar/id6443335749',
+//     ],
+//   },
 ];

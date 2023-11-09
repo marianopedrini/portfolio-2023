@@ -3,8 +3,24 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Mariano Pedrini',
-  description: 'Mariano Pedrini is a frontend developer from Argentina with focus on JavaScript.',
+  title: 'Mariano Pedrini - Frontend Developer',
+  description: 'Mariano Pedrini is a frontend developer from Argentina with focus on JavaScript and React.',
+  keywords: ['Next.js', 'React', 'JavaScript', 'Frontend', 'Developer'],
+  authors: [{ name: 'Mariano', url: 'https://github.com/marianopedrini' }],
+  creator: 'Mariano Pedrini',
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 const avenir_next = localFont({
