@@ -2,6 +2,8 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { gsap } from 'gsap';
+import Lenis from '@studio-freight/lenis';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import SplashScreen from '@/components/SplashScreen/SplashScreen';
 import Header from '@/components/Header/Header';
@@ -24,7 +26,7 @@ export default function Home() {
         delay: 0.5,
         onComplete: () => setIsLoading(false),
       });
-
+      ScrollTrigger
       setTimeline(tl);
     });
 
@@ -33,10 +35,22 @@ export default function Home() {
 
   // Smooth Scroll using locomotive scroll
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
   }, []);
 
   return (
