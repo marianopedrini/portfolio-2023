@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect, useLayoutEffect, useRef } from 'react';
-import Link from 'next/link';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
 
@@ -60,8 +59,7 @@ const Header = () => {
             forwardRef={iconRef}
           />
 
-          <Link
-            href={'/#hero'}
+          <div
             onClick={() => setIsMenuActive(false)}
             className="hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:inline-block"
           >
@@ -73,7 +71,7 @@ const Header = () => {
               <span className="font-semibold">Mariano</span>
               Pedrini
             </h4>
-          </Link>
+          </div>
         </div>
       </div>
     </>
