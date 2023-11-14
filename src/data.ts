@@ -49,7 +49,7 @@ export const contactLinks: DefaultLink[] = [
 
 export const careerItems: CareerExperience[] = [
   {
-    period: '2022 - now',
+    period: 'Now - 2022',
     companies: [
       {
         id: 4,
@@ -63,7 +63,7 @@ export const careerItems: CareerExperience[] = [
   },
 
   {
-    period: `2021 - 2022`,
+    period: `2022 - 2021`,
     companies: [
       {
         id: 2,
@@ -115,8 +115,22 @@ export const skills: Skills = {
 };
 
 export const works: Work[] = [
+    {
+        id: 1,
+        slug: 'portfolio',
+        name: '2023 Portfolio',
+        image: {
+          url: '/images/portfolio-2023.png',
+          alt: 'Image of 2023 portfolio',
+        },
+        company: 'Personal Project',
+        info: 'My current portfolio.',
+        role: 'This site was designed by me and is made using latest technologies.',
+        stack: ['Next','React', 'Tailwind', 'Html', 'Css'],
+        links: undefined,
+      },
   {
-    id: 1,
+    id: 2,
     slug: 'avicii',
     name: 'Avicii Fanpage',
     image: {
@@ -126,11 +140,11 @@ export const works: Work[] = [
     company: 'Personal Project',
     info: 'A personal project created in memory of Avicii to hone my skills and reinforce key concepts.',
     role: 'Both the development and the simple design were carried out by me. I did the design in Figma, and I implemented the development using React and Tailwind CSS.',
-    stack: ['Html', 'Css', 'Javascript', 'React', 'Tailwind'],
+    stack: ['React', 'Tailwind', 'Html', 'Css', 'Javascript'],
     links: ['https://avicii-mp.vercel.app/'],
   },
   {
-    id: 2,
+    id: 3,
     slug: 'calsa',
     name: 'Calsa',
     image: {
@@ -144,7 +158,7 @@ export const works: Work[] = [
     links: ['https://www.calsa.com.ar'],
   },
   {
-    id: 3,
+    id: 4,
     slug: 'studio-ghibli',
     name: 'Studio Ghibli',
     image: {
@@ -158,7 +172,7 @@ export const works: Work[] = [
     links: ['https://studio-ghibli-mp.vercel.app/'],
   },
   {
-    id: 4,
+    id: 5,
     slug: 'salud-digestiva',
     name: 'Salud Digestiva',
     image: {
@@ -169,9 +183,10 @@ export const works: Work[] = [
     info: 'Website belonging to Eurofarma laboratory with a large amount of content related to digestive health.',
     role: 'I played a key role in the design, development, and subsequent maintenance of the website, from its inception to its release.',
     stack: ['Html', 'Css', 'Javascript', 'Laravel'],
+    links: undefined,
   },
   {
-    id: 5,
+    id: 6,
     slug: 'lpharma-consultores',
     name: 'Lpharma',
     image: {
@@ -185,7 +200,7 @@ export const works: Work[] = [
     links: ['https://www.lpharmaconsultores.com/'],
   },
 //   {
-//     id: 6,
+//     id: 7,
 //     slug: 'ugd',
 //     name: 'Un gran dia',
 //     image: {
