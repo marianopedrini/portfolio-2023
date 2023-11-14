@@ -21,6 +21,7 @@ export const mainTextAnimation = (
 
   tl.to(lineRef.current, {
     opacity: 1,
+    duration: 0.5,
   })
     .fromTo(
       frontendWordRef.current,
@@ -29,7 +30,7 @@ export const mainTextAnimation = (
       },
       {
         xPercent: 0,
-        duration: 2,
+        duration: 1.5,
         ease: 'power2.out',
       }
     )
@@ -40,7 +41,7 @@ export const mainTextAnimation = (
       },
       {
         xPercent: 0,
-        duration: 2,
+        duration: 1.5,
         ease: 'power2.out',
       },
       '<.3'
@@ -85,17 +86,17 @@ export const nameAnimation = (nameRef: any) => {
 
 export const finishAnimation = (mainTextRef: any, nameRef: any, counterRef:any) => {
   const tl = gsap.timeline({
-    duration: 2,
+    duration: 1.5,
     ease: 'power2.out',
   });
 
   tl.to(mainTextRef.current, {
     'clip-path': 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)',
-    duration: 2,
+    duration: 1.5,
     ease: 'expo.inOut',
   }).to(nameRef.current, {
     opacity: 0,
-    duration: 2,
+    duration: 1.5,
     ease: 'power2.out'
   }, '-=1').to(counterRef.current, {
     y: -20,

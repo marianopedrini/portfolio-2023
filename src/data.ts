@@ -126,7 +126,7 @@ export const works: Work[] = [
         company: 'Personal Project',
         info: 'My current portfolio.',
         role: 'This site was designed by me and is made using latest technologies.',
-        stack: ['Next','React', 'Tailwind', 'Html', 'Css'],
+        stack: ['Next.js','React', 'Tailwind', 'Html', 'Css'],
         links: undefined,
       },
   {

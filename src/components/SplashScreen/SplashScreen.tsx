@@ -19,7 +19,7 @@ const SplashScreen = ({ timeline }: any) => {
     timeline &&
       timeline
         .add(mainTextAnimation(frontendWordRef, developerWordRef, lineRef))
-        .add(nameAnimation(nameRef))
+        .add(nameAnimation(nameRef), '<1')
         // .add(progressAnimation(counterRef), '0')
         .add(finishAnimation(mainTextRef, nameRef, counterRef), '-=1.5');
   }, [timeline]);
