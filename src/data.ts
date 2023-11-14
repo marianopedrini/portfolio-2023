@@ -32,7 +32,7 @@ export const contactLinks: DefaultLink[] = [
   },
   {
     link: 'https://www.linkedin.com/in/marianopedrini/',
-    text: 'www.linkedin.com/in/marianopedrini/',
+    text: 'linkedin.com/in/marianopedrini/',
     appName: 'Linkedin',
   },
   {
