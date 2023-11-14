@@ -32,14 +32,19 @@ export const contactLinks: DefaultLink[] = [
   },
   {
     link: 'https://www.linkedin.com/in/marianopedrini/',
-    text: 'https://www.linkedin.com/in/marianopedrini/',
+    text: 'www.linkedin.com/in/marianopedrini/',
     appName: 'Linkedin',
   },
   {
     link: 'https://github.com/marianopedrini',
-    text: 'https://github.com/marianopedrini',
+    text: 'github.com/marianopedrini',
     appName: 'Github',
   },
+  {
+    link: 'https://codepen.io/',
+    text: 'codepen.io/',
+    appName: 'Codepen',
+  }
   //   {
   //     link: 'https://twitter.com/marianpedrini',
   //     text: 'https://twitter.com/marianpedrini',

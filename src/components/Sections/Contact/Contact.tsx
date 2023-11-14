@@ -68,7 +68,7 @@ const Contact = () => {
             </ul>
           </nav>
         </div>
-        <h6 className="text-black font-semibold text-center mt-auto mb-6">
+        <h6 className="text-black text-sm font-semibold text-center mt-auto mb-6">
           Made and designed by Mariano Pedrini -{' '}
           <Link
             href={'https://pedrinimariano.netlify.app/'}
