@@ -1,7 +1,7 @@
 import { DefaultLink, Company, CareerExperience, Skills, Work } from '@/types';
 
 export const mainPhrase: string =
-  "I'm Mariano, a frontend developer who has a passion for JavaScript, design, and animations.";
+  "I'm Mariano, a frontend developer who is passionate about JavaScript, design, and animations.";
 
 export const aboutTexts: string[] = [
   "I am a frontend developer from Argentina, with 3 years of experience in web development. I'm a JavaScript enthusiast, and currently, I'm learning about advanced and high-performance animations.",
@@ -41,7 +41,7 @@ export const contactLinks: DefaultLink[] = [
     appName: 'Github',
   },
   {
-    link: 'https://codepen.io/',
+    link: 'https://codepen.io/marianopedrini',
     text: 'codepen.io/',
     appName: 'Codepen',
   }
@@ -54,21 +54,19 @@ export const contactLinks: DefaultLink[] = [
 
 export const careerItems: CareerExperience[] = [
   {
-    period: 'Now - 2022',
     companies: [
       {
         id: 4,
         link: 'https://egodesign.io/',
-        name: 'Ego Agency',
+        name: 'Ego',
         job: 'Software Developer',
         description:
-          'I’m currently working at Agencia Ego, creating experiences for important international brands recognized worldwide like Toyota Chile, Kinto, Lexus, Veritran and many others. I work with HTML, CSS, Javascript, React and Python (Django).',
+          'I’m currently working at Ego, creating experiences for important international brands recognized worldwide like Toyota Chile, Kinto, Lexus, Veritran and many others. I work with HTML, CSS, Javascript, React and Python (Django).',
       },
     ],
   },
 
   {
-    period: `2022 - 2021`,
     companies: [
       {
         id: 2,
@@ -84,18 +82,7 @@ export const careerItems: CareerExperience[] = [
         description: 'I also started taking some freelance jobs.',
       },
     ],
-  },
-  {
-    period: '2020',
-    companies: [
-      {
-        id: 1,
-        link: 'https://www.digitalhouse.com/ar',
-        name: 'Digital House',
-        description: 'I started learning web development.',
-      },
-    ],
-  },
+  }
 ];
 
 export const skills: Skills = {
