@@ -4,7 +4,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Mariano Pedrini - Frontend Developer',
-  description: 'Mariano Pedrini is a frontend developer from Argentina with focus on JavaScript and React.',
+  description:
+    'Mariano Pedrini is a frontend developer from Argentina with focus on JavaScript and React.',
   keywords: ['Next.js', 'React', 'JavaScript', 'Frontend', 'Developer'],
   authors: [{ name: 'Mariano', url: 'https://github.com/marianopedrini' }],
   creator: 'Mariano Pedrini',
@@ -21,7 +22,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-}
+  metadataBase: new URL('https://marianopedrini.com'),
+  alternates: {
+    canonical: '/',
+  },
+};
 
 const avenir_next = localFont({
   src: [
