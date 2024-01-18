@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Mariano', url: 'https://github.com/marianopedrini' }],
   creator: 'Mariano Pedrini',
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
