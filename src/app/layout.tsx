@@ -1,5 +1,6 @@
-import localFont from 'next/font/local'
 import type { Metadata } from 'next'
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import localFont from 'next/font/local'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -67,7 +68,10 @@ const avenir_next = localFont({
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${avenir_next.className}`}>
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
