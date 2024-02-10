@@ -55,9 +55,9 @@ export default function Home() {
 
   return (
     <main>
-      {isLoading && isHome ? (
+      {/* {isLoading && isHome ? (
         <SplashScreen timeline={timeline} />
-      ) : (
+      ) : ( */}
         <>
           <Cursor />
           <Header />
@@ -67,7 +67,7 @@ export default function Home() {
           <Work />
           <Contact />
         </>
-      )}
+      {/* )} */}
     </main>
   );
 }
