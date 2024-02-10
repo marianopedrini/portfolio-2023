@@ -29,8 +29,7 @@ const About = () => {
           ref={containerRef}
         >
           {aboutTexts.map((text, index) => (
-            <p className="opacity-0 text-2xl md:text-3xl" key={index} data-about-text>
-              {text}
+            <p className="opacity-0 text-2xl md:text-3xl main-texts" key={index} data-about-text dangerouslySetInnerHTML={{ __html: text }}>
             </p>
           ))}
         </div>

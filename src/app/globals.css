@@ -97,3 +97,15 @@ body {
 [data-404-btn]:hover span svg path {
     fill: black
 }
+
+.main-texts, .main-texts span {
+    transition: color .2s ease-in-out;
+}
+
+.main-texts:hover {
+    color: var(--darkgrey);
+}
+
+.main-texts:hover span {
+    color: var(--white);
+}

@@ -4,9 +4,9 @@ export const mainPhrase: string =
   "I'm Mariano, a frontend developer who is passionate about JavaScript, design, and animations.";
 
 export const aboutTexts: string[] = [
-  "I am a frontend developer from Argentina, with 3 years of experience in web development. I'm a JavaScript enthusiast, and currently, I'm learning about advanced and high-performance animations.",
-  'I studied industrial design for a few years at UBA, which gave me a design background that I apply in my career today.',
-  'I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge.',
+  "I am a <span>frontend developer</span> from Argentina, with <span>3 years of experience</span> in web development. I'm a <span>JavaScript enthusiast</span>, and currently, I'm learning about <span>advanced and high-performance animations</span>.",
+  'I studied industrial design for a few years at UBA, which gave me a <span>design background</span> that I apply in my career today.',
+  '<span>I love creating and developing amazing things with beautiful and interactive interfaces while constantly seeking new knowledge.</span>',
 ];
 
 export const menuLinks: DefaultLink[] = [
